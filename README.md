@@ -1,6 +1,8 @@
 # Bubblemachine
 Een online filterbubble simulator, voor het nabootsen en visualiseren van desinformatie-processen.
 
+![Bubblemachine](https://github.com/cmda-minor-web/bubblemachine/assets/bubblemachine.png)
+
 ## Inhoudsopgave
   * [Beschrijving](#beschrijving)
   * [Opdrachtgever](#opdrachtgever)
