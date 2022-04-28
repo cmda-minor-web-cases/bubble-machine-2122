@@ -18,7 +18,7 @@ Via onze partners in de Nederlandse media, de creatieve industrie en de gemeente
 Onze huidige filter bubbel simulator  is een waardevolle tool, gebaseerd op wetenschappelijke inzichten. De simulator is nu alleen geschikt voor wetenschappelijk onderzoek, en werkt niet online. 
 
 ## Opdrachtgever
-Lectoraat Responsible IT @ HvA
+Lectoraat Responsible IT @ HvA  
 Product Owner: Yuri Westplat
 
 ## Design challenge
