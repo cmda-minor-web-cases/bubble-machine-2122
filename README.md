@@ -27,7 +27,7 @@ Product Owner: Yuri Westplat
 The Responsible IT research group at the Hogeschool van Amsterdam conducts academic and applied research on technologies behind fake news detection, filter bubbles and recommendation algorithms. Through our collaborations with partners in the Dutch media and design industry and the City of Amsterdam, we recognize the urgent need for an easy-to-use tool like The Bubble Machine to **understand the mechanisms of disinformation**.
 
 ## Design challenge
-The Responsible IT computer model is currently not accessible to the public. The resulting outcome of this project is a public web application which is a pleasure to use. 
+The Responsible IT computer model is currently not accessible to the public. The resulting outcome of this project is a public web application that is a pleasure to use. 
 
 With the  web application you develop, journalists and the public can simulate the spread of news and evaluate how the interplay between cognitive filters, social network interaction and recommender systems affects the diversity of content exposed to users. 
 
@@ -38,8 +38,10 @@ Through an interactive, instructive an intuitive web interface, the app will off
 ### User stories
 **1 web based simulator**
 As a journalist, I can use a web-based simulator connected to data through an API, so I can visualize the spread of news through a network. 
+
 **2 filters and controls**
 As a journalist, I can change various parameters of the simulator so i can combine factors that affects the diversity of content exposed to users.  
+
 **3 data visualisatinos**
 As a journalist, I can run a simulation so I can evaluate the interplay between cognitive filters, social network interaction and recommender systems in  visualisations. 
 
