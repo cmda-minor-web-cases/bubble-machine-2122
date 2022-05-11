@@ -30,14 +30,14 @@ Through our collaborations with partners in the Dutch media and design industry 
 
 ## Design challenge
 
-With the web interface you develop, journalists can simulate the spread of news and evaluate how the interplay between cognitive filters, social network interaction and recommender systems affects the diversity of content exposed to users. 
+The Responsible IT computer model is currently not accessible to the public. With the  web application you develop, journalists can simulate the spread of news and evaluate how the interplay between cognitive filters, social network interaction and recommender systems affects the diversity of content exposed to users. 
 
-The Responsible IT computer model is currently not accessible to the public. The resulting outcome of this project is a public web application. Through an interactive, instructive web interface, the app will offer specialists a simulator environment with various parameters such as users' characteristics, social network settings, and specific types of recommender systems. By running the simulator with different parameters, users can visualise, compare and analyse the consequence of combining various factors.
+The resulting outcome of this project is a public web application. Through an interactive, instructive web interface, the app will offer specialists a simulator environment with various parameters such as users' characteristics, social network settings, and specific types of recommender systems. By running the simulator with different parameters, users can visualise, compare and analyse the consequence of combining various factors.
 
 ### User stories
-1 ...  
-2 ...  
-3 ...  
+1 As a journalist, I can use an online simulator environment with can simulate the spread of news and evaluate how the interplay between cognitive filters, social network interaction and recommender systems affects the diversity of content exposed to users. 
+2 As a journalist, I can change parameters of various parameters to combine various factors
+3 As a journalist, I can run a simulation so I can visualise, compare and analyse the consequence of combining various factors.
 
 ## Data
 Relevante data is via een API te ontsluiten.
