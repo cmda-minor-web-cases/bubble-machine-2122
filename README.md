@@ -1,5 +1,7 @@
 # Bubblemachine
-Een online filterbubble simulator, voor het nabootsen en visualiseren van desinformatie-processen.
+The Bubble Machine is an online simulator tool that allows journalists, researchers and activists to mimic the spread of disinformation through the interaction between users, media networks and news outlets curated by recommendation systems. 
+
+The Bubble Machine aims to provide journalists, researchers and people interested in the subject with direct insight into the mechanisms behind disinformation. More specifically, investigate the interplay between personal preferences, social and technological interactions. 
 
 ![Bubblemachine](https://github.com/cmda-minor-web-cases/bubblemachine/blob/main/assets/bubblemachine.png?raw=true)
 
@@ -12,20 +14,25 @@ Een online filterbubble simulator, voor het nabootsen en visualiseren van desinf
   * [Licentie](#licentie)
 
 ## Beschrijving
-Sociale media-algoritmes spelen een belangrijke rol bij de verspreiding van desinformatie via sociale media. Met name aanbevelings-algoritmes, die automatisch content-suggesties doen op basis van online gedrag, versnellen en versterken de verspreiding van (des)informatie. Gebruik van deze algoritmes kan leiden tot filterbubbels: online omgevingen waar men alleen nog de eigen mening hoort en ziet. Gebruikers die extreme boodschappen verspreiden, kunnen met behulp van algoritmes een sterke bijdrage leveren aan het ontstaan van filterbubbels (Boutyline & Willer, 2017). 
+Social media algorithms play a major role in distributing and amplifying disinformation. Recommendation algorithms, in particular, speed up and amplify the spread of (dis)information through the emergence of *filter bubbles*. Use of these algorithms can lead to filter bubbles: online environments where only one's own opinion is heard and seen. Users who spread extreme messages can use algorithms to make a strong contribution to the creation of filter bubbles (Boutyline & Willer, 2017).
 
-Sociale mediabedrijven doen geheimzinnig over de werking van hun aanbevelings-algoritmes. Niemand weet precies hoe ze werken, en ze zijn zelfs voor ICT-ers vaak moeilijk te begrijpen. Wij zijn het lectoraat Responsible IT van de Hogeschool van Amsterdam. Onze onderzoeksgroep doet onderzoek naar de technologie van filterbubbels en fake news. Voor dit onderzoek hebben we een werkende filter bubbel simulator ontwikkeld: een virtueel model van een sociaal netwerk, met virtuele gebruikers en nagemaakte algoritmes. Hiermee kunnen we filterbubbels produceren, en analyseren hoe die precies ontstaan.
+Social media companies are secretive about the inner workings of their products. No one knows exactly how the algorithms work. Researchers at Responsible IT have studied recommendation algorithms and developed a working model and software tools to mimic how they work. This project makes these models available and usable for the public. 
 
-Via onze partners in de Nederlandse media, de creatieve industrie en de gemeente Amsterdam zien we een grote behoefte aan eenvoudig te gebruiken tools om de mechanismes van desinformatie te begrijpen. Een online versie van onze simulator die het desinformatie-proces nabootst en visualiseert, is volgens ons van grote waarde voor mediaprofessionals en onderzoekers.
-
-Onze huidige filter bubbel simulator  is een waardevolle tool, gebaseerd op wetenschappelijke inzichten. De simulator is nu alleen geschikt voor wetenschappelijk onderzoek, en werkt niet online. 
+Social media companies are secretive about the inner workings of their products. No one knows exactly how the algorithms work. Researchers at Responsible IT have studied recommendation algorithms and developed a working model and software tools to mimic how they work. This project makes these models available and usable for the public. 
 
 ## Opdrachtgever
 Lectoraat Responsible IT @ HvA  
 Product Owner: Yuri Westplat
 
+The Responsible IT research group at the Hogeschool van Amsterdam conducts academic and applied research on technologies behind fake news detection, filter bubbles and recommendation algorithms. 
+
+Through our collaborations with partners in the Dutch media and design industry and the City of Amsterdam, we recognize the urgent need for an easy-to-use tool like The Bubble Machine to **understand the mechanisms of misinformation**.
+
 ## Design challenge
-Ontwerp en ontwikkel een online filterbubble simulator
+
+With the web interface you develop, journalists can simulate the spread of news and evaluate how the interplay between cognitive filters, social network interaction and recommender systems affects the diversity of content exposed to users. 
+
+The Responsible IT computer model is currently not accessible to the public. The resulting outcome of this project is a public web application. Through an interactive, instructive web interface, the app will offer specialists a simulator environment with various parameters such as users' characteristics, social network settings, and specific types of recommender systems. By running the simulator with different parameters, users can visualise, compare and analyse the consequence of combining various factors.
 
 ### User stories
 1 ...  
