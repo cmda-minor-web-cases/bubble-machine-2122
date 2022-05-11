@@ -18,8 +18,6 @@ Social media algorithms play a major role in distributing and amplifying disinfo
 
 Social media companies are secretive about the inner workings of their products. No one knows exactly how the algorithms work. Researchers at Responsible IT have studied recommendation algorithms and developed a working model and software tools to mimic how they work. This project makes these models available and usable for the public. 
 
-Social media companies are secretive about the inner workings of their products. No one knows exactly how the algorithms work. Researchers at Responsible IT have studied recommendation algorithms and developed a working model and software tools to mimic how they work. This project makes these models available and usable for the public. 
-
 ## Opdrachtgever
 Lectoraat Responsible IT @ HvA  
 Product Owner: Yuri Westplat
