@@ -1,4 +1,4 @@
-# Bubblemachine
+# Bubble Machine
 The Bubble Machine is an online simulator tool that allows journalists to mimic the spread of disinformation through the interaction between users, media networks and news outlets curated by recommendation algorithms. The Bubble Machine gives direct insight into the mechanisms behind disinformation. More specifically, investigate the interplay between personal preferences, social and technological interactions. 
 
 In this assignment you will work with international students form the minor **User Experience Design**.They will do user research, and design the User Experience of the application.
