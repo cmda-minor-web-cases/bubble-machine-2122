@@ -27,12 +27,9 @@ Product Owner: Yuri Westplat
 The Responsible IT research group at the Hogeschool van Amsterdam conducts academic and applied research on technologies behind fake news detection, filter bubbles and recommendation algorithms. Through our collaborations with partners in the Dutch media and design industry and the City of Amsterdam, we recognize the urgent need for an easy-to-use tool like The Bubble Machine to **understand the mechanisms of disinformation**.
 
 ## Design challenge
-The Responsible IT computer model is currently not accessible to the public. The resulting outcome of this project is a public web application that is a pleasure to use. 
+The Responsible IT computer model is currently not accessible to the public. The resulting outcome of this project is a public web application that is a pleasure to use. The researchers have created a web API and data source for the model. Students from the minor User Experience design will design the User Experience and a UI. 
 
-With the  web application you develop, journalists and the public can simulate the spread of news and evaluate how the interplay between cognitive filters, social network interaction and recommender systems affects the diversity of content exposed to users. 
-
-Through an interactive, instructive an intuitive web interface, the app will offer specialists a simulator environment with various parameters such as users' characteristics, social network settings, and specific types of recommender systems. By running the simulator with different parameters, users can visualise, compare and analyse the consequence of combining various factors.
-
+Develop a interactive, instructive an intuitive web application with the API. By running the simulator with different parameters, users can visualise, compare and analyse the consequence of combining various factors.
 
 
 ### User stories
@@ -46,7 +43,7 @@ As a journalist, I can change various parameters of the simulator so i can combi
 As a journalist, I can run a simulation so I can evaluate the interplay between cognitive filters, social network interaction and recommender systems in  visualisations. 
 
 ## Data
-Relevante data is via een API te ontsluiten.
+TBA
 
 ## Planning
 In de eerste week van de meesterproef is een briefing met de opdrachtgever en begeleiders. Wekelijks wordt aan de opdrachtgever een prototype gedemonstreerd en de volgende stappen besproken. Tussentijds kunnen via Teams vragen gesteld worden.
