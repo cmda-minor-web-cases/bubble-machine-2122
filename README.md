@@ -45,14 +45,13 @@ As a journalist, I can run a simulation so I can evaluate the interplay between 
 
 **Technical Realisation**
 
-Exposing the model functionalities through a standardised Web API
-Integrating the web application with the Web API, which includes:
-Simulation parameters
-Real-time analysis of population using a graph 
-Real-time analysis of metrics (presence of homogeneous networks, diversity metrics)
-Integrated Tests 
-User Acceptance Tests
-Deployment of the Web API to the production environment
+- Integrating the web application with the Web API, which includes:
+- Simulation parameters
+- Real-time analysis of population using a graph 
+- Real-time analysis of metrics (presence of homogeneous networks, diversity metrics)
+- Integrated Tests 
+- User Acceptance Tests
+- Deployment of the Web API to the production environment
 
 
 ## Data
