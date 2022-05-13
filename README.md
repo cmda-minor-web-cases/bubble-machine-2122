@@ -42,8 +42,22 @@ As a journalist, I can change various parameters of the simulator so i can combi
 **3 data visualisatinos**
 As a journalist, I can run a simulation so I can evaluate the interplay between cognitive filters, social network interaction and recommender systems in  visualisations. 
 
+
+**Technical Realisation**
+
+Exposing the model functionalities through a standardised Web API
+Integrating the web application with the Web API, which includes:
+Simulation parameters
+Real-time analysis of population using a graph 
+Real-time analysis of metrics (presence of homogeneous networks, diversity metrics)
+Integrated Tests 
+User Acceptance Tests
+Deployment of the Web API to the production environment
+
+
 ## Data
 TBA
+
 
 ## Planning
 The team recieves a briefing with the client in the first week. Every week, the team demonstrates a prototype to the client and discusses the next steps. You will work closely with the UX students to discuss designs.
