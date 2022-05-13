@@ -1,7 +1,7 @@
 # Bubble Machine
 The Bubble Machine is an online simulator tool that allows journalists to mimic the spread of disinformation through the interaction between users, media networks and news outlets curated by recommendation algorithms. The Bubble Machine gives direct insight into the mechanisms behind disinformation. More specifically, investigate the interplay between personal preferences, social and technological interactions. 
 
-In this assignment you will work with international students form the minor **User Experience Design**.They will do user research, and design the User Experience of the application.
+In this assignment you will work with international students form the minor **User Experience Design**. They will design the User Experience and User Interface of the application.
 
 Keywords: Interaction, Data Visualisation, API, Algorithms, Social networks, Journalism, Fake News
 
@@ -46,7 +46,7 @@ As a journalist, I can run a simulation so I can evaluate the interplay between 
 TBA
 
 ## Planning
-In de eerste week van de meesterproef is een briefing met de opdrachtgever en begeleiders. Wekelijks wordt aan de opdrachtgever een prototype gedemonstreerd en de volgende stappen besproken. Tussentijds kunnen via Teams vragen gesteld worden.
+The team recieves a briefing with the client in the first week. Every week, the team demonstrates a prototype to the client and discusses the next steps. You will work closely with the UX students to discuss designs.
 
 ## Licentie
 
