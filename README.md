@@ -18,7 +18,7 @@ Keywords: Interaction, Data Visualisation, API, Algorithms, Social networks, Jou
 ## Beschrijving
 Social media algorithms play a major role in distributing and amplifying disinformation. Recommendation algorithms, in particular, speed up and amplify the spread of (dis)information through the emergence of *filter bubbles*: online environments where only one's own opinion is heard and seen. Users who spread extreme messages can use algorithms to make a strong contribution to the creation of filter bubbles (Boutyline & Willer, 2017).
 
-Social media companies are secretive about the inner workings of their products. No one knows exactly how the algorithms work. Researchers at Responsible IT have studied recommendation algorithms and developed a working software model to mimic how they work. This project makes these models available online, and usable for the public. 
+Social media companies are secretive about the inner workings of their products. No one knows exactly how the algorithms work. Researchers at Responsible IT have studied recommendation algorithms and developed a working software model to mimic how they work, based on the [triple-filter-bubble model](https://bpspsychub.onlinelibrary.wiley.com/doi/10.1111/bjso.12286). This project makes these models available online, and usable for the public. 
 
 ## Opdrachtgever
 Lectoraat Responsible IT and the [HvA Responsible AI Lab](https://www.hva.nl/appliedai/labs/responsible-ai-lab/responsible-ai-lab.html)
@@ -30,6 +30,8 @@ Researchers: Marcio Fuckner, Pascal Wiggers
 The Responsible IT research group at the Hogeschool van Amsterdam conducts academic and applied research on technologies behind fake news detection, filter bubbles and recommendation algorithms. Through our collaborations with partners in the Dutch media and design industry and the City of Amsterdam, we recognize the urgent need for an easy-to-use tool like The Bubble Machine to **understand the mechanisms of disinformation**.
 
 [Article on the filter bubble project](https://hvana.nl/lees/44506/hoe-ontstaat-de-filterbubbel-misschien-wel-door-ons-eigen-gedrag)
+
+Paper on the [triple-filter-bubble model](https://bpspsychub.onlinelibrary.wiley.com/doi/10.1111/bjso.12286).
 
 [Presentation of the model - ppt](https://icthva-my.sharepoint.com/:p:/g/personal/y_westplat_hva_nl/ETcNaQZ3l-xFllm7sp498MMBobEoU9Szykc7UC9C9vyd1A?e=4AKhel)
 
