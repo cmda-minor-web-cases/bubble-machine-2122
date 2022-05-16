@@ -21,8 +21,12 @@ Social media algorithms play a major role in distributing and amplifying disinfo
 Social media companies are secretive about the inner workings of their products. No one knows exactly how the algorithms work. Researchers at Responsible IT have studied recommendation algorithms and developed a working software model to mimic how they work. This project makes these models available online, and usable for the public. 
 
 ## Opdrachtgever
-Lectoraat Responsible IT @ HvA  
+Lectoraat Responsible IT and the [HvA Responsible AI Lab](https://www.hva.nl/appliedai/labs/responsible-ai-lab/responsible-ai-lab.html)
 Product Owner: Yuri Westplat
+
+Product Owner: Yuri Westplat, y.westplat@hva.nl 
+
+Researchers: Marcio Fuckner, Pascal Wiggers 
 
 The Responsible IT research group at the Hogeschool van Amsterdam conducts academic and applied research on technologies behind fake news detection, filter bubbles and recommendation algorithms. Through our collaborations with partners in the Dutch media and design industry and the City of Amsterdam, we recognize the urgent need for an easy-to-use tool like The Bubble Machine to **understand the mechanisms of disinformation**.
 
