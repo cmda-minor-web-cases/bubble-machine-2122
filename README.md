@@ -21,19 +21,15 @@ Social media algorithms play a major role in distributing and amplifying disinfo
 Social media companies are secretive about the inner workings of their products. No one knows exactly how the algorithms work. Researchers at Responsible IT have studied recommendation algorithms and developed a working software model to mimic how they work, based on the [triple-filter-bubble model](https://bpspsychub.onlinelibrary.wiley.com/doi/10.1111/bjso.12286). This project makes these models available online, and usable for the public. 
 
 ## Opdrachtgever
-Lectoraat Responsible IT and the [HvA Responsible AI Lab](https://www.hva.nl/appliedai/labs/responsible-ai-lab/responsible-ai-lab.html)
-
-Product Owner: Yuri Westplat, y.westplat@hva.nl 
-
-Researchers: Marcio Fuckner, Pascal Wiggers 
+- Lectoraat Responsible IT and the [HvA Responsible AI Lab](https://www.hva.nl/appliedai/labs/responsible-ai-lab/responsible-ai-lab.html)
+- Product Owner: Yuri Westplat, y.westplat@hva.nl 
+- Researchers: Marcio Fuckner, Pascal Wiggers 
 
 The Responsible IT research group at the Hogeschool van Amsterdam conducts academic and applied research on technologies behind fake news detection, filter bubbles and recommendation algorithms. Through our collaborations with partners in the Dutch media and design industry and the City of Amsterdam, we recognize the urgent need for an easy-to-use tool like The Bubble Machine to **understand the mechanisms of disinformation**.
 
-[Article on the filter bubble project](https://hvana.nl/lees/44506/hoe-ontstaat-de-filterbubbel-misschien-wel-door-ons-eigen-gedrag)
-
-Paper on the [triple-filter-bubble model](https://bpspsychub.onlinelibrary.wiley.com/doi/10.1111/bjso.12286).
-
-[Presentation of the model - ppt](https://icthva-my.sharepoint.com/:p:/g/personal/y_westplat_hva_nl/ETcNaQZ3l-xFllm7sp498MMBobEoU9Szykc7UC9C9vyd1A?e=4AKhel)
+- [Article on the filter bubble project](https://hvana.nl/lees/44506/hoe-ontstaat-de-filterbubbel-misschien-wel-door-ons-eigen-gedrag)
+- Paper on the [triple-filter-bubble model](https://bpspsychub.onlinelibrary.wiley.com/doi/10.1111/bjso.12286).
+- [Presentation of the model - ppt](https://icthva-my.sharepoint.com/:p:/g/personal/y_westplat_hva_nl/ETcNaQZ3l-xFllm7sp498MMBobEoU9Szykc7UC9C9vyd1A?e=4AKhel)
 
 ## Design challenge
 The Responsible IT computer model is currently not accessible to the public. The resulting outcome of this project is a public web application that is a pleasure to use. The researchers have created a web API and data source for the model. Students from the minor User Experience design will design the User Experience and a UI. 
