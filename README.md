@@ -22,7 +22,6 @@ Social media companies are secretive about the inner workings of their products.
 
 ## Opdrachtgever
 Lectoraat Responsible IT and the [HvA Responsible AI Lab](https://www.hva.nl/appliedai/labs/responsible-ai-lab/responsible-ai-lab.html)
-Product Owner: Yuri Westplat
 
 Product Owner: Yuri Westplat, y.westplat@hva.nl 
 
