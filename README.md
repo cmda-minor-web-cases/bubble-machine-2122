@@ -88,10 +88,9 @@ Front-end developers can interact with a standard REST API to:
 * Run steps
 * Reset the graph to the initial state
 
-Real-time events are sent via WebSockets so that the UI can be automatically updated during the simulation.
+Real-time events are sent via WebSockets so that the UI can be automatically updated during the simulation. This feature will become available soon.
 
 Developers can use a testing-purposes Web API to model and test their application. Documentation is available [here](https://bubble-machine-api-dummy.herokuapp.com/doc)
-
 
 
 ## Planning
