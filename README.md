@@ -60,7 +60,7 @@ As a journalist, I can run a simulation so I can evaluate the interplay between 
 
 
 ## Data
-TBA
+[Bubble machine API](https://bubble-machine-api-dummy.herokuapp.com/swagger-ui/index.html#/)
 
 
 ## Planning
