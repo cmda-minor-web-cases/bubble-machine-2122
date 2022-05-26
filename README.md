@@ -102,7 +102,7 @@ To receive real-time notifications, you should first connect to the server throu
 
 ##### Specifying which session id(s) you want to subscribe
 
-You should listen to events or one or more sessions. You should send a message to the WebSocket server to become a listener. Here you can see an example of a message subscribing to events of a session.
+To listen to events, you should send a message to the WebSocket server informing the target session id. Here you can see an example of a message subscribing to events of a certain session.
 
 ```
 { "id": 15}
@@ -116,7 +116,7 @@ Messages are sent to registered clients if action is executed in the server. Her
 
 **Added item**
 ```
-{"step": 1, "action": "addItem", "id": 5, "x": 0.5326178516864388, "y": -0.33866157818320697, "trace": "generate_items"}
+{"step": 1, "action": "addItem", "id": 5, "x": 0.53, "y": -0.33, "trace": "generate_items"}
 ```
 
 **Added link between user and item**
@@ -147,6 +147,11 @@ Messages are sent to registered clients if action is executed in the server. Her
 **Removed link between two individuals (friends)**
 ```
 {"step": 3, "action": "removeLink", "source":  1, "target":  4, "label": "friend", "trace": "test"},
+```
+
+**Individual position was changed**
+```
+{"step": 3, "action": "changePosition", "id": 0, "x": -0.80, "y": 0.29},
 ```
 
 If you want to make a preliminary test, se a websocket client. There are many available on the Web. You can use, for example the [Simple WebSocket client Extension from Chrome](https://chrome.google.com/webstore/detail/simple-websocket-client/pfdhoblngboilpfeibdedpjgfnlcodoo?hl=en)
