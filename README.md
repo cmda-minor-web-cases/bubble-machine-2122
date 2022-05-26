@@ -98,7 +98,9 @@ Developers can use a testing-purposes Web API to model and test their applicatio
 Real-time events are sent via WebSockets so that the UI can be automatically updated during the simulation. The following steps are necessary to register and listen to events:
 
 #####  Connecting to the web socket server
-To receive real-time notifications, you should first connect to the server through a web socket connection. This is the WebSocket address: [ws://https://bubble-machine-api-dummy.herokuapp.com/action](ws://https://bubble-machine-api-dummy.herokuapp.com/action)
+To receive real-time notifications, you should first connect to the server through a web socket connection. 
+
+This is the WebSocket address: ws://bubble-machine-api-dummy.herokuapp.com/action
 
 ##### Specifying which session id(s) you want to subscribe
 
