@@ -81,16 +81,75 @@ This section describes input data necessary to run the simulation, as well outpu
 
 The central data structure of this model is a graph that represents individuals, news items, and links between them. When the simulation starts, a random graph is generated, and it is changed over time based on probabilistic events and behaviours specified at the start of the simulation. The user should be able to visualise these changes during the simulation and collect metrics. 
 
+#### REST API
+
 Front-end developers can interact with a standard REST API to:
+
 * Create a simulation session, 
 * Specify parameters, 
 * Query the graph at anytime
 * Run steps
 * Reset the graph to the initial state
 
-Real-time events are sent via WebSockets so that the UI can be automatically updated during the simulation. This feature will become available soon.
-
 Developers can use a testing-purposes Web API to model and test their application. Documentation is available [here](https://bubble-machine-api-dummy.herokuapp.com/doc)
+
+#### Real-time data through WebSockets
+
+Real-time events are sent via WebSockets so that the UI can be automatically updated during the simulation. The following steps are necessary to register and listen to events:
+
+#####  Connecting to the web socket server
+To receive real-time notifications, you should first connect to the server through a web socket connection. This is the WebSocket address: [ws://https://bubble-machine-api-dummy.herokuapp.com/action](ws://https://bubble-machine-api-dummy.herokuapp.com/action)
+
+##### Specifying which session id(s) you want to subscribe
+
+You should listen to events or one or more sessions. You should send a message to the WebSocket server to become a listener. Here you can see an example of a message subscribing to events of a session.
+
+```
+{ "id": 15}
+```
+
+The server will register your socket client and no answer is sent back. This process should be executed for every session you want to listen for events.
+
+##### Listening to events
+
+Messages are sent to registered clients if action is executed in the server. Here you can see different types of events:
+
+**Added item**
+```
+{"step": 1, "action": "addItem", "id": 5, "x": 0.5326178516864388, "y": -0.33866157818320697, "trace": "generate_items"}
+```
+
+**Added link between user and item**
+```
+{"step": 2, "action": "addItemLink", "source": 0, "target": 12, "label": "itemlink", "trace": "step(additem)"},
+```
+
+**Removed link between user and item**
+```
+{"step": 3, "action": "removeItemLink", "source": 0, "target": 12, "label": "itemlink", "trace": "step(additem)"},
+```
+
+**Added link between users that share the same item (info-sharer)**
+```
+{"step": 1, "action": "addInfoLink", "source": 1, "target": 3, "label": "infolink", "trace": "step(additem)"},
+```
+
+**Removed link between users that share the same item (info-sharer)**
+```
+{"step": 3, "action": "removeInfoLink", "source": 2, "target": 4, "label": "infolink", "trace": "step(additem)"}
+```
+
+**Added link between two individuals (friends)**
+```
+{"step": 3, "action": "addLink", "source":  0, "target":  2, "label": "friend", "trace": "test"},
+```
+
+**Removed link between two individuals (friends)**
+```
+{"step": 3, "action": "removeLink", "source":  1, "target":  4, "label": "friend", "trace": "test"},
+```
+
+If you want to make a preliminary test, se a websocket client. There are many available on the Web. You can use, for example the [Simple WebSocket client Extension from Chrome](https://chrome.google.com/webstore/detail/simple-websocket-client/pfdhoblngboilpfeibdedpjgfnlcodoo?hl=en)
 
 
 ## Planning
