@@ -128,27 +128,27 @@ Messages are sent to registered clients if action is executed in the server. Her
 
 **Removed link between user and item**
 ```
-{"step": 3, "action": "removeItemLink", "source": 0, "target": 12, "label": "itemlink", "trace": "step(additem)"},
+{"step": 3, "action": "removeItemLink", "source": 0, "target": 12, "label": "itemlink", "trace": "step(removeitem)"},
 ```
 
 **Added link between users that share the same item (info-sharer)**
 ```
-{"step": 1, "action": "addInfoLink", "source": 1, "target": 3, "label": "infolink", "trace": "step(additem)"},
+{"step": 1, "action": "addInfoLink", "source": 1, "target": 3, "label": "infolink", "trace": "step(addInfoLink)"},
 ```
 
 **Removed link between users that share the same item (info-sharer)**
 ```
-{"step": 3, "action": "removeInfoLink", "source": 2, "target": 4, "label": "infolink", "trace": "step(additem)"}
+{"step": 3, "action": "removeInfoLink", "source": 2, "target": 4, "label": "infolink", "trace": "step(removeInfoLink)"}
 ```
 
 **Added link between two individuals (friends)**
 ```
-{"step": 3, "action": "addLink", "source":  0, "target":  2, "label": "friend", "trace": "test"},
+{"step": 3, "action": "addLink", "source":  0, "target":  2, "label": "friend", "trace": "step(addLink)"},
 ```
 
 **Removed link between two individuals (friends)**
 ```
-{"step": 3, "action": "removeLink", "source":  1, "target":  4, "label": "friend", "trace": "test"},
+{"step": 3, "action": "removeLink", "source":  1, "target":  4, "label": "friend", "trace": "step(removeLink)"},
 ```
 
 **Individual position was changed**
