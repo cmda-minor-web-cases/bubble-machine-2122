@@ -1,3 +1,4 @@
+
 // API request
 const httpPost = (method,post) => {
   var xmlHttp = new XMLHttpRequest();
@@ -176,4 +177,13 @@ createLinks();
 // Bronnen
 // https://www.sitepoint.com/how-to-translate-from-dom-to-svg-coordinates-and-back-again/
 
+
+
+const menuButton = document.getElementById('menuButton')
+const menu = document.querySelector('header nav')
+const openMenu = () => {
+    menu.classList.toggle('open')
+}
+
+menuButton.addEventListener('click', openMenu)
 
