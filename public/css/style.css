@@ -20,6 +20,10 @@ body {
   overflow: hidden;
 }
 
+svg:hover ~ nav {
+  background: hotpink;
+}
+
 header {
   position: relative;
 }
@@ -30,14 +34,18 @@ header h1 {
 }
 
 header nav {
-  position: absolute;
-  top: 50vh;
-  left: -12em;
+  position: fixed;
+  bottom: 0;
+  left: -13em;
   display: flex;
   flex-wrap: wrap;
-  background: #444;
+  background: #4444449c;
   border-radius: 0 0.5em 0.5em 0;
   transition: 1s;
+}
+
+header nav:hover {
+  background: #444;
 }
 
 header nav button {
@@ -69,13 +77,13 @@ svg {
 }
 
 .person {
-  fill: red;
+  fill: #348b90a8;
 }
 
 .person:hover {
-  fill: blue;
+  fill: #348c90bd;
 }
 
 .item {
-  fill: black;
+  fill: #dc143cbe;
 }

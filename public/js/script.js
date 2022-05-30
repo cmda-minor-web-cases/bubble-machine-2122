@@ -1,10 +1,18 @@
 const menuButton = document.getElementById('menuButton')
 const menu = document.querySelector('header nav')
+const body = document.querySelector('svg')
+
 const openMenu = () => {
     menu.classList.toggle('open')
 }
 
 menuButton.addEventListener('click', openMenu)
+
+// body.addEventListener("mouseover", function( event ) {
+//   // highlight the mouseover target
+//   menu.style = { background: "#444"};
+//   // console.log(event.target)
+// })
 
 const httpPost = (method,post) => {
   var xmlHttp = new XMLHttpRequest();
@@ -12,10 +20,14 @@ const httpPost = (method,post) => {
   xmlHttp.send( null );
 }
 
-document.querySelector("#nextStep").addEventListener('click', (e) => {
+
+
+const nextStep = () => {
   httpPost("POST","https://bubble-machine-api-dummy.herokuapp.com/rest/session/1/step");
-  location.reload();
-}, false);
+  // location.reload();
+}
+
+document.querySelector("#nextStep").addEventListener('click', nextStep)
 
 document.querySelector("#resetSimulation").addEventListener('click', (e) => {
   httpPost("PUT","https://bubble-machine-api-dummy.herokuapp.com/rest/session/1/reset");
@@ -70,7 +82,7 @@ for (const item of session["nodes"] ) {
   // c.classList.add(session["nodes"][i]["label"]);
 c.setAttributeNS(null, 'cx', session["nodes"][i]["x"]);
 c.setAttributeNS(null, 'cy',  reversNumber(session["nodes"][i]["y"]));
-c.setAttributeNS(null, 'r', 0.04);
+c.setAttributeNS(null, 'r', 0.012);
 svg.appendChild(c);
   i++;
 }
@@ -88,8 +100,8 @@ switch (session["links"][i]["label"]) {
       newLine.setAttribute('y1',`${document.querySelector(".person"+session["links"][i]["source"]).cy.baseVal.value}`);
       newLine.setAttribute('x2',`${document.querySelector(".person"+session["links"][i]["target"]).cx.baseVal.value}`);
       newLine.setAttribute('y2',`${document.querySelector(".person"+session["links"][i]["target"]).cy.baseVal.value}`);
-      newLine.setAttribute("stroke", "yellow")
-      newLine.setAttribute("stroke-width", "0.01")
+      newLine.setAttribute("stroke", "#44444447")
+      newLine.setAttribute("stroke-width", "0.005")
       svg.append(newLine);
       i++;
   break;
@@ -127,8 +139,8 @@ switch (session["links"][i]["label"]) {
               newLine.setAttribute('y1',`${document.querySelector(".item"+session["links"][i]["source"]).cy.baseVal.value}`);
               newLine.setAttribute('x2',`${document.querySelector(".person"+item).cx.baseVal.value}`);
               newLine.setAttribute('y2',`${document.querySelector(".person"+item).cy.baseVal.value}`);
-              newLine.setAttribute("stroke", "green")
-              newLine.setAttribute("stroke-width", "0.01")
+              newLine.setAttribute("stroke", "#44444447")
+              newLine.setAttribute("stroke-width", "0.006")
               svg.append(newLine);
           }
   
