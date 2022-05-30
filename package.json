@@ -1,0 +1,27 @@
+{
+  "name": "bubble-machine",
+  "version": "1.0.0",
+  "description": "CMD Minor Web design and development Meesterproef",
+  "main": "app.js",
+  "scripts": {
+    "test": "npm test",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kuckelkorn/bubble-machine.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kuckelkorn/bubble-machine/issues"
+  },
+  "homepage": "https://github.com/Kuckelkorn/bubble-machine#readme",
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "nodemon": "^2.0.16",
+    "socket.io": "^4.5.1"
+  }
+}
