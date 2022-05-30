@@ -15,12 +15,7 @@ Keywords: Interaction, Data Visualisation, API, Algorithms, Social networks, Jou
   - [Beschrijving](#beschrijving)
   - [Opdrachtgever](#opdrachtgever)
   - [Design challenge](#design-challenge)
-    - [User stories](#user-stories)
-  - [Data](#data)
-    - [Input data (overview of parameters)](#input-data-overview-of-parameters)
-    - [Output data](#output-data)
-  - [Planning](#planning)
-  - [Licentie](#licentie)
+  - [Installation](#installation)
 
 ## Beschrijving
 
@@ -46,67 +41,4 @@ The Responsible IT computer model is currently not accessible to the public. The
 
 Develop a interactive, instructive an intuitive web application with the API. By running the simulator with different parameters, users can visualise, compare and analyse the consequence of combining various factors.
 
-### User stories
-
-**1 web based simulator**
-As a journalist, I can use a web-based simulator connected to data through an API, so I can visualize the spread of news through a network.
-
-**2 filters and controls**
-As a journalist, I can change various parameters of the simulator so i can combine factors that affects the diversity of content exposed to users.  
-
-**3 data visualisatinos**
-As a journalist, I can run a simulation so I can evaluate the interplay between cognitive filters, social network interaction and recommender systems in  visualisations.
-
-**Technical Realisation**
-
-- Integrating the web application with the Web API, which includes:
-- Simulation parameters
-- Real-time analysis of population using a graph
-- Real-time analysis of metrics (presence of homogeneous networks, diversity metrics)
-- Integrated Tests
-- User Acceptance Tests
-- Deployment of the Web API to the production environment
-
-## Data
-
-This section describes input data necessary to run the simulation, as well output data produced by the simulator
-
-### Input data (overview of parameters)
-
-- Number of users: Determine how many users will be part of the experiment. It is a numeric value that ranges from 2 to 500
-- Number of friends: Determine how many friends (on average) a user will have. It is a numeric value that ranges from 0 to 100
-- steps to count a day: An Agent-based simulation tool executes steps so that actors can execute their actions. This parameter indicates how many steps can be used to count a day. In general, one step counts for a day. It is a numeric value that ranges from 1 to 100.
-- produced items per day: This parameter indicates how many items are generated in the network per day. It is a numeric value that ranges from 1 to 100
-- Maximum number of item links: This parameter represents the individual's limited memory. They can integrate a certain amount of information. When their memory is complete, they have to forget bits of information to incorporate new ones
-- Number of exposed items per person, per day: The average number of items exposed to a user.
-- latitude of acceptance: News items are subject to the evaluation of persons. It is modelled as a  probabilistic event-based. The integration probability is a function of the attitude distance between the individual and the information. For more information, please refer to the Triple Filter Bubble paper.
-- sharpness: Specifies how steep the integration probability of integration takes place. For more information, please refer to the Triple Filter Bubble paper.
-- probability of posting items on the social network: Determines the probabilistic event of a user posting items in the social network
-- user behaviour: Allows users to simulate a different combination of behaviours: random search, reading articles through social networks, and different implementations of recommendation systems
-- challenge: when a recommendation system is in place, the user can determine if the recommendation system will challenge the user with more diverse content
-
-### Output data
-
-The central data structure of this model is a graph that represents individuals, news items, and links between them. When the simulation starts, a random graph is generated, and it is changed over time based on probabilistic events and behaviours specified at the start of the simulation. The user should be able to visualise these changes during the simulation and collect metrics.
-
-Front-end developers can interact with a standard REST API to:
-
-- Create a simulation session,
-- Specify parameters,
-- Query the graph at anytime
-- Run steps
-- Reset the graph to the initial state
-
-Real-time events are sent via WebSockets so that the UI can be automatically updated during the simulation. This feature will become available soon.
-
-Developers can use a testing-purposes Web API to model and test their application. Documentation is available [here](https://bubble-machine-api-dummy.herokuapp.com/doc)
-
-## Planning
-
-The team recieves a briefing with the client in the first week. Every week, the team demonstrates a prototype to the client and discusses the next steps. You will work closely with the UX students to discuss designs.
-
-## Licentie
-
-![GNU GPL V3](https://www.gnu.org/graphics/gplv3-127x51.png)
-
-This work is licensed under [GNU GPLv3](./LICENSE).
+## Installation
