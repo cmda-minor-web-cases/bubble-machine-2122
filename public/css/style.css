@@ -87,3 +87,18 @@ svg {
 .item {
   fill: #dc143cbe;
 }
+
+#zoom {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  padding: 10px;
+}
+
+div#zoom button {
+  background-color: white;
+  color: black;
+  font-size: 2em;
+  width: 10vw;
+  aspect-ratio: 1 / 1;
+}

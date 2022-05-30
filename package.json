@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "CMD Minor Web design and development Meesterproef",
   "main": "app.js",
+  "type": "module",
   "scripts": {
     "test": "nodemon app.js",
     "start": "node app.js"

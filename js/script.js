@@ -186,4 +186,3 @@ const openMenu = () => {
 }
 
 menuButton.addEventListener('click', openMenu)
-
