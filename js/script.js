@@ -44,7 +44,7 @@ const reversNumber = (number) => {
   }
 }
 
-// Variavle to create a node
+// Variable to create a node
 let i = 0;
 let persons = 0;
 let items = 0;
@@ -173,6 +173,7 @@ const createLinks =() => {
 createLinks();
 
 
-  // https://www.sitepoint.com/how-to-translate-from-dom-to-svg-coordinates-and-back-again/
+// Bronnen
+// https://www.sitepoint.com/how-to-translate-from-dom-to-svg-coordinates-and-back-again/
 
 
