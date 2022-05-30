@@ -162,3 +162,14 @@ svg.addEventListener('click', function(e) {
   // https://www.sitepoint.com/how-to-translate-from-dom-to-svg-coordinates-and-back-again/
 
 
+
+// When clicking on zoomIn button change viewBox to zoom
+document.querySelector("#zoomIn").addEventListener('click', (e) => {
+  console.log("test");
+    document.querySelector("#mysvg").setAttribute("viewBox", "-0.5 -0.5  1 1"); 
+  }, false);
+  
+  // When clicking on zoomOut button change viewBox to zoom
+  document.querySelector("#zoomOut").addEventListener('click', (e) => {
+    document.querySelector("#mysvg").setAttribute("viewBox", "-1 -1  2 2");
+  }, false);
