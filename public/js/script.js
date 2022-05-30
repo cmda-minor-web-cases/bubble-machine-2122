@@ -24,7 +24,7 @@ const httpPost = (method,post) => {
 
 const nextStep = () => {
   httpPost("POST","https://bubble-machine-api-dummy.herokuapp.com/rest/session/1/step");
-  // location.reload();
+  location.reload();
 }
 
 document.querySelector("#nextStep").addEventListener('click', nextStep)
