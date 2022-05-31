@@ -161,8 +161,6 @@ switch (session["links"][i]["label"]) {
   break;
 }
 
-
-
 }
 
 // click a circle
@@ -173,69 +171,67 @@ svg.addEventListener('click', function(e) {
   console.log(t.getBoundingClientRect());
 }, false);
 
-
-
-  // https://www.sitepoint.com/how-to-translate-from-dom-to-svg-coordinates-and-back-again/
-
-
-
-
-  let zoom = 1;  
-
- 
+// Globale variable zoom
+let zoom = 1;   
   
-  // Zoom in and out svg
-  const zoomFunction = () => {
-    // When clicking on zoomIn button change viewBox to zoom
-    document.querySelector("#zoomIn").addEventListener('click', (e) => {
-      zoom = zoom*2;
-      document.querySelector("#mysvg").setAttribute("viewBox", `${newX/zoom} ${newY/zoom}  ${2/zoom} ${2/zoom} `);
-      console.log(svg.viewBox);
-    }, false);
-    
-    // When clicking on zoomOut button change viewBox to zoom
-    document.querySelector("#zoomOut").addEventListener('click', (e) => {
-      zoom = zoom/2;
-      document.querySelector("#mysvg").setAttribute("viewBox", `${newX/zoom} ${newY/zoom}  ${2/zoom} ${2/zoom} `);
-      console.log(svg.viewBox);
-    }, false);
-  }
+// Zoom in and out svg
+const zoomFunction = () => {
+  // When clicking on zoomIn button change viewBox to zoom
+  document.querySelector("#zoomIn").addEventListener('click', (e) => {
+    zoom = zoom*2;
+    svg.setAttribute("viewBox", `${newX/zoom} ${newY/zoom}  ${2/zoom} ${2/zoom} `);
+  }, false);
   
-  zoomFunction();
+  // When clicking on zoomOut button change viewBox to zoom
+  document.querySelector("#zoomOut").addEventListener('click', (e) => {
+    zoom = zoom/2;
+    svg.setAttribute("viewBox", `${newX/zoom} ${newY/zoom}  ${2/zoom} ${2/zoom} `);
+  }, false);
+}
+
+// Start zoom function
+zoomFunction();
   
+// Add drag function to code and change the vieuwport
+function makeDraggable(evt) {
   let allowDrag = false;
   let startX = svg.viewBox.baseVal.x;
   let startY = svg.viewBox.baseVal.y;
   const dragSpeed = 300;
   let curentX = 0;
   let curentY = 0;
-    // Add drag function to code and change the vieuwport
-    function makeDraggable(evt) {
-
-      svg.addEventListener('mousedown', startDrag);
-      svg.addEventListener('mousemove', drag);
-      svg.addEventListener('mouseup', endDrag);
-      // svg.addEventListener('mouseleave', endDrag);
-      function startDrag(evt) {
-        allowDrag = true;
-        curentX = evt.clientX;
-        curentY = evt.clientY;
-      }
-      function drag(evt) {
-        if(allowDrag == true){
-          newX = (startX+(curentX-evt.clientX)/dragSpeed);
-          newY = (startY+(curentY-evt.clientY)/dragSpeed);
-          document.querySelector("#mysvg").setAttribute("viewBox", `${newX/zoom} ${newY/zoom}  ${2/zoom} ${2/zoom} `);
+  svg.addEventListener('mousedown', startDrag);
+  svg.addEventListener('mousemove', drag);
+  svg.addEventListener('mouseup', endDrag);
   
-        }
-      }
-      function endDrag(evt) {
-        allowDrag = false;
-        newX = (startX+(curentX-evt.clientX)/dragSpeed);
-          newY = (startY+(curentY-evt.clientY)/dragSpeed);
-        startX = (startX+(curentX-evt.clientX)/dragSpeed);
-        startY = (startY+(curentY-evt.clientY)/dragSpeed);
-        
-        document.querySelector("#mysvg").setAttribute("viewBox", `${newX/zoom} ${newY/zoom}  ${2/zoom} ${2/zoom} `);
-      }
+  // detect click position svg
+  function startDrag(evt) {
+    allowDrag = true;
+    curentX = evt.clientX;
+    curentY = evt.clientY;
+  }
+
+  // detect move position svg
+  function drag(evt) {
+    if(allowDrag == true){
+      newX = (startX+(curentX-evt.clientX)/dragSpeed);
+      newY = (startY+(curentY-evt.clientY)/dragSpeed);
+      svg.setAttribute("viewBox", `${newX/zoom} ${newY/zoom}  ${2/zoom} ${2/zoom} `);
     }
+  }
+
+  // detect mouse of position svg
+  function endDrag(evt) {
+    allowDrag = false;
+    newX = (startX+(curentX-evt.clientX)/dragSpeed);
+      newY = (startY+(curentY-evt.clientY)/dragSpeed);
+    startX = (startX+(curentX-evt.clientX)/dragSpeed);
+    startY = (startY+(curentY-evt.clientY)/dragSpeed);
+    svg.setAttribute("viewBox", `${newX/zoom} ${newY/zoom}  ${2/zoom} ${2/zoom} `);
+  }
+}
+
+
+
+// Bronnen
+// https://www.sitepoint.com/how-to-translate-from-dom-to-svg-coordinates-and-back-again/
