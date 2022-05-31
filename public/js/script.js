@@ -182,33 +182,36 @@ svg.addEventListener('click', function(e) {
 
   let zoom = 1;  
 
+ 
+  
   // Zoom in and out svg
   const zoomFunction = () => {
     // When clicking on zoomIn button change viewBox to zoom
     document.querySelector("#zoomIn").addEventListener('click', (e) => {
-    zoom = zoom*2;
-      document.querySelector("#mysvg").setAttribute("viewBox", ` ${svg.viewBox.baseVal.x/zoom} ${svg.viewBox.baseVal.y/zoom} ${2/zoom} ${2/zoom}`);
-  
+      zoom = zoom*2;
+      document.querySelector("#mysvg").setAttribute("viewBox", `${newX/zoom} ${newY/zoom}  ${2/zoom} ${2/zoom} `);
+      console.log(svg.viewBox);
     }, false);
     
     // When clicking on zoomOut button change viewBox to zoom
     document.querySelector("#zoomOut").addEventListener('click', (e) => {
       zoom = zoom/2;
-      document.querySelector("#mysvg").setAttribute("viewBox", ` ${svg.viewBox.baseVal.x/zoom} ${svg.viewBox.baseVal.y/zoom} ${2/zoom} ${2/zoom}`); 
+      document.querySelector("#mysvg").setAttribute("viewBox", `${newX/zoom} ${newY/zoom}  ${2/zoom} ${2/zoom} `);
+      console.log(svg.viewBox);
     }, false);
   }
   
   zoomFunction();
   
-  
+  let allowDrag = false;
+  let startX = svg.viewBox.baseVal.x;
+  let startY = svg.viewBox.baseVal.y;
+  const dragSpeed = 300;
+  let curentX = 0;
+  let curentY = 0;
     // Add drag function to code and change the vieuwport
     function makeDraggable(evt) {
-      let allowDrag = false;
-      let startX = svg.viewBox.baseVal.x;
-      let startY = svg.viewBox.baseVal.y;
-      const dragSpeed = 300;
-      let curentX = 0;
-      let curentY = 0;
+
       svg.addEventListener('mousedown', startDrag);
       svg.addEventListener('mousemove', drag);
       svg.addEventListener('mouseup', endDrag);
