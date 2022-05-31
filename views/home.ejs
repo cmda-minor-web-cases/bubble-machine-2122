@@ -1,14 +1,23 @@
 <%- include ('./partials/head.ejs') %>
-<h1>Bubble-machine</h1>
+<header>
+  <h1>Bubble-machine</h1>
+  <nav>
+    <button id="nextStep">Next step</button>
+    <button id="resetSimulation">Reset simulation</button>
+    <p id="menuButton">OPEN</p>
+  </nav>
+</header>
 
-<button id="nextStep">Next step</button>
-<button id="resetSimulation">Reset simulation</button>
+<figure id="graph">
 
-<svg id="mysvg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-1 -1 2 2" preserveAspectRatio="xMidYMid meet"></svg>
+</figure>
+<div id="zoom">
+  <button id="zoomIn">+</button>
+  <button id="zoomOut">-</button>
+</div>
 
 <h2>List of notes</h2>
 <ul id="listNotes"></ul>
 <ul id="listDocuments"></ul>
-
 
 <%- include ('./partials/footer.ejs') %>
