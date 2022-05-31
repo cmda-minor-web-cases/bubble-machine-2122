@@ -2,7 +2,10 @@ import update from './D3-graph.js'
 
 const menuButton = document.getElementById('menuButton')
 const menu = document.querySelector('header nav')
-const svg = document.querySelector('svg')
+// const svg = document.querySelector('svg')
+const resetBtn = document.querySelector('#resetSimulation')
+const nextBtn = document.querySelector('#nextStep')
+
 
 const openMenu = () => {
     menu.classList.toggle('open')
@@ -10,55 +13,52 @@ const openMenu = () => {
 
 menuButton.addEventListener('click', openMenu)
 
-// body.addEventListener("mouseover", function( event ) {
-//   // highlight the mouseover target
-//   menu.style = { background: "#444"};
-//   // console.log(event.target)
-// })
 
-const httpPost = (method,post) => {
-  var xmlHttp = new XMLHttpRequest();
-  xmlHttp.open( method, post, false ); // false for synchronous request
-  xmlHttp.send( null );
+const fetchAPI = async (method, url) => {
+  if (method === 'PUT' || method === 'POST') {
+    fetch(url, {
+      method: `${method}`
+    })
+  } else {
+    const response = await fetch(url, {
+      method: `${method}`,
+      mode: 'cors'
+    })
+    const data = response.json()
+    return data
+  }
 }
 
-const nextStep = () => {
-  httpPost("POST","https://bubble-machine-api-dummy.herokuapp.com/rest/session/1/step");
-  location.reload();
+// Initial display of graph
+const data = await fetchAPI('GET', 'https://bubble-machine-api-dummy.herokuapp.com/rest/session/1');
+update(await data)
+
+
+// Updating graph
+const nextStep = async () => {
+  fetchAPI('POST', 'https://bubble-machine-api-dummy.herokuapp.com/rest/session/1/step')
+  const data = await fetchAPI('GET', 'https://bubble-machine-api-dummy.herokuapp.com/rest/session/1');
+  update(await data)
 }
 
-document.querySelector("#nextStep").addEventListener('click', nextStep)
-
-document.querySelector("#resetSimulation").addEventListener('click', (e) => {
-  httpPost("PUT","https://bubble-machine-api-dummy.herokuapp.com/rest/session/1/reset");
-  location.reload();
-}, false);
-
-const httpGet =() => {
-  const xmlHttp = new XMLHttpRequest();
-  xmlHttp.open( "GET", "https://bubble-machine-api-dummy.herokuapp.com/rest/session/1", false ); // false for synchronous request
-  xmlHttp.send( null );
-  return xmlHttp.responseText;
+const resetSession = async () => {
+  fetchAPI('PUT', 'https://bubble-machine-api-dummy.herokuapp.com/rest/session/1/reset')
+  const data = fetchAPI('GET', 'https://bubble-machine-api-dummy.herokuapp.com/rest/session/1');
+  update(await data)
 }
 
-const session = JSON.parse(httpGet());
-console.log(session)
-
-// Create Graph
-update( await session)
 
 
-// click a circle
-svg.addEventListener('click', function(e) {
-  var t = e.target;
-  if (t.nodeName != 'circle') return;
-  t.classList.add("test");
-  console.log(t.getBoundingClientRect());
-}, false);
 
 
 
 // https://www.sitepoint.com/how-to-translate-from-dom-to-svg-coordinates-and-back-again/
+
+
+// Buttons
+
+nextBtn.addEventListener('click', nextStep)
+resetBtn.addEventListener('click', resetSession)
 
 
 // When clicking on zoomIn button change viewBox to zoom
