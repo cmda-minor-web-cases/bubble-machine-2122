@@ -78,7 +78,6 @@ svg {
 
 .person {
   fill: #348b90b0;
-  size: 10px;
 }
 
 .person:hover {
@@ -87,7 +86,6 @@ svg {
 
 .item {
   fill: #dc143cbe;
-  size: 5px;
 }
 
 #zoom {

@@ -21,10 +21,6 @@ const update = async (data) => {
   xScale.domain([d3.min(nodes, (d) => d.x), d3.max(nodes, (d) => d.x)])
   yScale.domain([d3.min(nodes, (d) => d.y), d3.max(nodes, (d) => d.y)])
 
-  // const link = d3.linkHorizontal().data(links)
-  // .source( d => d.source )
-  // .target( d => d.target );
-
   const circle = svg.selectAll('circle').data(nodes).join(
     (enter) => {
       enter = enter.append('circle')
