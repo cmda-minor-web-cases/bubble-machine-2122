@@ -36,7 +36,7 @@ header h1 {
 header nav {
   position: fixed;
   bottom: 0;
-  left: -13em;
+  left: -20em;
   display: flex;
   flex-wrap: wrap;
   background: #4444449c;

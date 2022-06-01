@@ -1,19 +1,21 @@
 import express from 'express'
 const app = express();
 
-const port = 4100;
+const port = process.env.PORT || 4100;
 import 'dotenv/config'
+import { router } from './src/routers/router.js';
 
 
-app.set('view engine', '.ejs');
-app.set('views', './views');
 
-app.use(express.static('public'));
+app
+   .set('view engine', '.ejs')
+   .set('views', './views')
+   .use(express.static('public'))
+   .use(router)
 
-app.get('/', (req, res) => {
-    res.render('home')
-  })
-
-app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`)
+   .listen(port, () => {
+    console.log(`Server launched on ${port} 🚀`)
 })
+
+
+// wiki es 5 /6
