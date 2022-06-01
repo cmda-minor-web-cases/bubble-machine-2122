@@ -1,9 +1,10 @@
 const menuButton = document.getElementById('menuButton')
 const menu = document.querySelector('header nav')
 const body = document.querySelector('svg')
-
+const arrowImg = document.getElementById('#menuButton')
 const openMenu = () => {
     menu.classList.toggle('open')
+    arrowImg.src = "img/arrowleft.png"
 }
 
 menuButton.addEventListener('click', openMenu)
@@ -47,7 +48,7 @@ const httpGet =() => {
 
 const session = JSON.parse(httpGet());
 
-// console.log(session);
+//console.log(session.links);
 
 
 const reversNumber = (number) => {
@@ -81,6 +82,24 @@ for (const item of session["nodes"] ) {
   }
   // c.classList.add(session["nodes"][i]["label"]);
 c.setAttributeNS(null, 'cx', session["nodes"][i]["x"]);
+
+// let steps = (session["nodes"][i].x);
+
+// console.log(steps)
+
+// localStorage.setItem('steps',  JSON.stringify(steps));
+// // let steps = session["nodes"][i];
+
+// // let saveStep = () => {
+// //   steps.forEach(step => {       
+
+// //     localStorage.setItem('person', JSON.stringify(step)) 
+// //   });
+// // };
+
+// // saveStep();
+
+
 c.setAttributeNS(null, 'cy',  reversNumber(session["nodes"][i]["y"]));
 c.setAttributeNS(null, 'r', 0.012);
 svg.appendChild(c);
@@ -88,14 +107,11 @@ svg.appendChild(c);
 }
 
 for (const item of session["links"] ) {
-  if(session["links"][i] == null){
-    console.log("error");
-continue;
-  }
   li.appendChild(document.createTextNode(session["links"][i]["label"]+" - "+session["links"][i]["source"]+" - "+session["links"][i]["target"]));
   document.querySelector("#listDocuments").appendChild(li);
   const newLine = document.createElementNS('http://www.w3.org/2000/svg','line');
 // newLine.setAttribute('id','line2');
+
 
 
 switch (session["links"][i]["label"]) {
@@ -121,6 +137,7 @@ switch (session["links"][i]["label"]) {
               newLine.setAttribute("stroke", "black")
               newLine.setAttribute("stroke-width", "0.01")
               svg.append(newLine);
+           
           }
   
           continue;
@@ -161,6 +178,8 @@ switch (session["links"][i]["label"]) {
   break;
 }
 
+
+
 }
 
 // click a circle
@@ -171,67 +190,25 @@ svg.addEventListener('click', function(e) {
   console.log(t.getBoundingClientRect());
 }, false);
 
-// Globale variable zoom
-let zoom = 1;   
-  
-// Zoom in and out svg
-const zoomFunction = () => {
-  // When clicking on zoomIn button change viewBox to zoom
-  document.querySelector("#zoomIn").addEventListener('click', (e) => {
-    zoom = zoom*2;
-    svg.setAttribute("viewBox", `${newX/zoom} ${newY/zoom}  ${2/zoom} ${2/zoom} `);
+
+
+  // https://www.sitepoint.com/how-to-translate-from-dom-to-svg-coordinates-and-back-again/
+
+
+
+// When clicking on zoomIn button change viewBox to zoom
+document.querySelector("#zoomIn").addEventListener('click', (e) => {
+  console.log("test");
+    document.querySelector("#mysvg").setAttribute("viewBox", "-0.5 -0.5  1 1"); 
   }, false);
   
   // When clicking on zoomOut button change viewBox to zoom
   document.querySelector("#zoomOut").addEventListener('click', (e) => {
-    zoom = zoom/2;
-    svg.setAttribute("viewBox", `${newX/zoom} ${newY/zoom}  ${2/zoom} ${2/zoom} `);
+    document.querySelector("#mysvg").setAttribute("viewBox", "-1 -1  2 2");
   }, false);
-}
-
-// Start zoom function
-zoomFunction();
-  
-// Add drag function to code and change the vieuwport
-function makeDraggable(evt) {
-  let allowDrag = false;
-  let startX = svg.viewBox.baseVal.x;
-  let startY = svg.viewBox.baseVal.y;
-  const dragSpeed = 300;
-  let curentX = 0;
-  let curentY = 0;
-  svg.addEventListener('mousedown', startDrag);
-  svg.addEventListener('mousemove', drag);
-  svg.addEventListener('mouseup', endDrag);
-  
-  // detect click position svg
-  function startDrag(evt) {
-    allowDrag = true;
-    curentX = evt.clientX;
-    curentY = evt.clientY;
-  }
-
-  // detect move position svg
-  function drag(evt) {
-    if(allowDrag == true){
-      newX = (startX+(curentX-evt.clientX)/dragSpeed);
-      newY = (startY+(curentY-evt.clientY)/dragSpeed);
-      svg.setAttribute("viewBox", `${newX/zoom} ${newY/zoom}  ${2/zoom} ${2/zoom} `);
-    }
-  }
-
-  // detect mouse of position svg
-  function endDrag(evt) {
-    allowDrag = false;
-    newX = (startX+(curentX-evt.clientX)/dragSpeed);
-      newY = (startY+(curentY-evt.clientY)/dragSpeed);
-    startX = (startX+(curentX-evt.clientX)/dragSpeed);
-    startY = (startY+(curentY-evt.clientY)/dragSpeed);
-    svg.setAttribute("viewBox", `${newX/zoom} ${newY/zoom}  ${2/zoom} ${2/zoom} `);
-  }
-}
 
 
-
-// Bronnen
-// https://www.sitepoint.com/how-to-translate-from-dom-to-svg-coordinates-and-back-again/
+  // localstorage y1 en x1 ophalen van de client
+  // label: "person"
+  // x: 0.797451970717726
+  // y: 0.6517441909029593
