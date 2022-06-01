@@ -1,31 +1,25 @@
 <%- include ('./partials/head.ejs') %>
 <header>
-    <h1>Bubble-machine</h1>
-    <nav>
-      <button id="nextStep">Next step</button>
-      <button id="resetSimulation">Reset simulation</button>
-      <p id="menuButton">OPEN</p>
-    </nav>
-  </header>
+  <h1>Bubble-machine</h1>
+  <nav>
+    <button id="nextStep">Next step</button>
+    <!-- <button id="autoPlay">Auto play</button> -->
+    <button id="resetSimulation">Reset simulation</button>
+    <button id="makeSession">Make Session</button>
+    <p id="menuButton">OPEN</p>
+  </nav>
+</header>
 
-  <svg
-    id="mysvg"
-    xmlns="http://www.w3.org/2000/svg"
-    xmlns:xlink="http://www.w3.org/1999/xlink"
-    viewBox="-1 -1 2 2"
-    onload="makeDraggable(evt)">
-    preserveAspectRatio="xMidYMid meet"
-  ></svg>
+<figure id="graph">
 
-  <!-- Zoom in and out svg -->
-  <div id="zoom">
-    <button id="zoomIn">+</button>
-    <button id="zoomOut">-</button>
-  </div>
+</figure>
+<div id="zoom">
+  <button id="zoomIn">+</button>
+  <button id="zoomOut">-</button>
+</div>
 
   <h2>List of notes</h2>
   <ul id="listNotes"></ul>
   <ul id="listDocuments"></ul>
-
 
 <%- include ('./partials/footer.ejs') %>
