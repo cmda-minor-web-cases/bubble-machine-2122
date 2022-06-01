@@ -1,6 +1,7 @@
 const width = window.innerWidth
 const height = window.innerHeight
-const size = 5
+const margin = {width: (0.1 * width), height:(0.1 * height)}
+const size = 10
 
 // Create the svg in the body
 const svg = d3.select('figure').append('svg')
@@ -9,8 +10,8 @@ const svg = d3.select('figure').append('svg')
 
 
 // Scale
-const xScale = d3.scaleLinear().range([0, width])
-const yScale = d3.scaleLinear().range([0, height])
+const xScale = d3.scaleLinear().range([0 + margin.width, width - margin.width])
+const yScale = d3.scaleLinear().range([0 + margin.height, height - margin.height])
 
 
 const update = async (data) => {
