@@ -13,15 +13,15 @@ html {
 body {
   min-height: 100%;
   /* font-family: Lato, sans-serif; */
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 100%;
   padding: 0;
   color: #fff;
-  background-color: #0F0C15;
+  background-color: #0f0c15;
   /* overflow: hidden; */
 }
 
-svg:hover~nav {
+svg:hover ~ nav {
   background: hotpink;
 }
 
@@ -30,7 +30,7 @@ header {
 }
 
 header h1 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: #fff;
   text-shadow: 1px 2px 4px #348c90bd;
 }
@@ -57,7 +57,6 @@ header nav:hover {
 header nav ul {
   width: 25vw;
   display: grid;
-
 }
 
 /* parameters out of nav and to section */
@@ -103,7 +102,7 @@ header nav img {
 }
 
 #menuButton {
-  background-color: #2B2B2B;
+  background-color: #2b2b2b;
   position: absolute;
   left: 100%;
   top: 50%;
@@ -112,8 +111,6 @@ header nav img {
   padding: 10px;
   border-radius: 0 5px 5px 0;
 }
-
-
 
 .open {
   left: 0;
@@ -124,19 +121,19 @@ svg {
   max-height: 100vh;
   display: flex;
   justify-content: center;
-  background-color: #0F0C15;
+  background-color: #0f0c15;
 }
 
 .person {
-  fill: #2780E7;
+  fill: #2780e7;
 }
 
 .person:hover {
-  fill: #2780E7;
+  fill: #2780e7;
 }
 
 .item {
-  fill: #AA46A4;
+  fill: #aa46a4;
   box-shadow: 0px 2px 4px 0px rgba(170, 70, 164, 1);
 }
 
@@ -151,7 +148,7 @@ div#zoom button {
   display: block;
   border: none;
   border-radius: 5px;
-  background-color: #2B2B2B;
+  background-color: #2b2b2b;
   color: white;
   font-size: 2em;
   margin-bottom: 5px;
