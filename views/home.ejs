@@ -1,103 +1,97 @@
 <%- include ('./partials/head.ejs') %>
 <header>
- <img src="img/bubble-machine-logo.svg" alt="bubble machine logo">
-    <h1>Bubble Machine</h1>
-    <nav>
-      <ul>
-        <li>
-          <img src="img/arrow-down.png" alt="open button">
-          <h3>Parameter 1</h3>
-          <p>data over parameter 1</p>
+  <img src="img/bubble-machine-logo.svg" alt="bubble machine logo" />
+  <h1>Bubble Machine</h1>
+  <nav>
+    <ul>
 
+    </ul>
+  </nav>
+  <section>
+    <ul>
+      <li>
+        <img src="img/arrow-down.png" alt="open button" />
+        <h3>Parameter 1</h3>
+        <p>data over parameter 1</p>
         </li>
-
+  
         <li>
-          <img src="img/arrow-down.png" alt="open button">
+          <img src="img/arrow-down.png" alt="open button" />
           <h3>parameter 2</h3>
           <p>data over parameter 2</p>
         </li>
-
+  
         <li>
-          <img src="img/arrow-down.png" alt="open button">
+          <img src="img/arrow-down.png" alt="open button" />
           <h3>parameter 3</h3>
           <p>data over parameter 2</p>
         </li>
-
+  
         <li>
-          <img src="img/arrow-down.png" alt="open button">
+          <img src="img/arrow-down.png" alt="open button" />
           <h3>parameter 4</h3>
           <p>data over parameter 2</p>
         </li>
-
+  
         <li>
-          <img src="img/arrow-down.png" alt="open button">
+          <img src="img/arrow-down.png" alt="open button" />
           <h3>parameter 5</h3>
           <p>data over parameter 2</p>
         </li>
-
+  
         <li>
-          <img src="img/arrow-down.png" alt="open button">
+          <img src="img/arrow-down.png" alt="open button" />
           <h3>parameter 6</h3>
           <p>data over parameter 2</p>
         </li>
-
+  
         <li>
-          <img src="img/arrow-down.png" alt="open button">
+          <img src="img/arrow-down.png" alt="open button" />
           <h3>parameter 7</h3>
           <p>data over parameter 2</p>
         </li>
-
+  
         <li>
-          <img src="img/arrow-down.png" alt="open button">
+          <img src="img/arrow-down.png" alt="open button" />
           <h3>parameter 8</h3>
           <p>data over parameter 2</p>
         </li>
-
+  
         <li>
-          <img src="img/arrow-down.png" alt="open button">
+          <img src="img/arrow-down.png" alt="open button" />
           <h3>parameter 9</h3>
           <p>data over parameter 2</p>
         </li>
-
+  
         <li>
-          <img src="img/arrow-down.png" alt="open button">
+          <img src="img/arrow-down.png" alt="open button" />
           <h3>parameter 10</h3>
           <p>data over parameter 2</p>
         </li>
-
+  
         <li>
-          <img src="img/arrow-down.png" alt="open button">
+          <img src="img/arrow-down.png" alt="open button" />
           <h3>parameter 11</h3>
           <p>data over parameter 2</p>
         </li>
-
       </ul>
-      <img src="img/arrow-right.png" alt="open button" id="menuButton">
-    </nav>
+      <img src="img/arrow-right.png" alt="open button" id="menuButton" />
+
   </header>
+    </section>
 
-  <svg
-    id="mysvg"
-    xmlns="http://www.w3.org/2000/svg"
-    xmlns:xlink="http://www.w3.org/1999/xlink"
-    viewBox="-1 -1 2 2"
-    onload="makeDraggable(evt)">
-    preserveAspectRatio="xMidYMid meet"
-  ></svg>
+<figure id="graph"></figure>
+<div id="zoom">
+  <button id="zoomIn">+</button>
+  <button id="zoomOut">-</button>
+</div>
 
-  <!-- Zoom in and out svg -->
-  <div id="zoom">
-    <button id="zoomIn">+</button>
-    <button id="zoomOut">-</button>
-  </div>
+<!-- reset and next step buttons -->
+<button id="nextStep">Next step</button>
+<button id="resetSimulation">Reset simulation</button>
 
-  <!-- reset and next step buttons -->
-  <button id="nextStep">Next step</button>
-      <button id="resetSimulation">Reset simulation</button>
-
-  <h2>List of notes</h2>
-  <ul id="listNotes"></ul>
-  <ul id="listDocuments"></ul>
-
+<h2>List of notes</h2>
+<ul id="listNotes"></ul>
+<ul id="listDocuments"></ul>
 
 <%- include ('./partials/footer.ejs') %>
