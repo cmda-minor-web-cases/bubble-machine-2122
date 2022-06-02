@@ -2,14 +2,14 @@ import update from './D3-graph.js'
 import { nextStep, autoPlay, makeSession, resetSession } from './graphButtons.js'
 console.log(document.querySelector('header'))
 
-const sessionID = 3
+const sessionID = 1
 const menuButton = document.getElementById('menuButton')
 const menu = document.querySelector('header nav')
 
 const resetBtn = document.querySelector('#resetSimulation')
 const nextBtn = document.querySelector('#nextStep')
 const sessionBtn = document.querySelector('#makeSession')
-// const autoBtn = document.querySelector('#autoPlay')
+const autoBtn = document.querySelector('#autoPlay')
 
 
 const openMenu = () => {
@@ -45,7 +45,7 @@ update(await data)
 nextBtn.addEventListener('click', nextStep)
 resetBtn.addEventListener('click', resetSession)
 sessionBtn.addEventListener('click', makeSession)
-// autoBtn.addEventListener('click', autoPlay)
+autoBtn.addEventListener('click', autoPlay)
 
 
 // When clicking on zoomIn button change viewBox to zoom

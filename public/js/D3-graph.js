@@ -15,7 +15,7 @@ const yScale = d3.scaleLinear().range([0 + margin.height, height - margin.height
 
 
 const update = async (data) => {
-  // console.log(data)
+  console.log(data)
   const nodes = data.nodes
   const links = data.links
 
@@ -45,6 +45,20 @@ const update = async (data) => {
 
   circle
     .transition()
+    // .attr('cx', (nodes) =>  {
+    //   if (nodes.label === 'person' && checkbox.checked === true){
+    //     return xScale(nodes.innate_x)
+    //   } else {
+    //     return xScale(nodes.x)
+    //   }}
+    // )
+    // .attr('cy', (nodes) =>  {
+    //   if (nodes.label === 'person' && checkbox.checked === true){
+    //     return xScale(nodes.innate_y)
+    //   } else {
+    //     return xScale(nodes.y)
+    //   }}
+    // )
     .attr('cx', (nodes) => xScale(nodes.x))
     .attr('cy', (nodes) => yScale(nodes.y))
     .attr('r', (nodes) => {
