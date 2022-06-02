@@ -104,3 +104,13 @@ div#zoom button {
   width: 10vw;
   aspect-ratio: 1 / 1;
 }
+
+a#link {
+  z-index: 100;
+  background-color: red;
+  width: 100px;
+  height: 100px;
+  position: fixed;
+  left: 0;
+  top: 0;
+}

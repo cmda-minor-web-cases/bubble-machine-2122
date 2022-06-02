@@ -43,3 +43,42 @@ const update = async (data) => {
 }
 
 export default update
+
+
+
+function downloadSVG(){
+
+
+// //get svg element.
+var svg2 = document.querySelector("svg");
+
+//get svg source.
+var serializer = new XMLSerializer();
+var source = serializer.serializeToString(svg2);
+
+//add name spaces.
+if(!source.match(/^<svg[^>]+xmlns="http\:\/\/www\.w3\.org\/2000\/svg"/)){
+    source = source.replace(/^<svg/, '<svg xmlns="http://www.w3.org/2000/svg"');
+}
+if(!source.match(/^<svg[^>]+"http\:\/\/www\.w3\.org\/1999\/xlink"/)){
+    source = source.replace(/^<svg/, '<svg xmlns:xlink="http://www.w3.org/1999/xlink"');
+}
+
+//add xml declaration
+source = '<?xml-stylesheet href="https://bubble-machine.herokuapp.com/css/style.css" version="1.0" standalone="no"?>\r\n' + source;
+
+//convert svg source to URI data scheme.
+var url = "data:image/svg+xml;charset=utf-8,"+encodeURIComponent(source);
+
+
+document.getElementById("link").setAttribute("href", url);
+document.getElementById("link").setAttribute("download", "test.svg");
+
+}
+
+// When clicking on zoomIn button change viewBox to zoom
+document.querySelector("#link").addEventListener('click', (e) => {
+  downloadSVG()
+  }, false);
+
+  
