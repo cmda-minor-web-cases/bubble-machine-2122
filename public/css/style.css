@@ -60,6 +60,8 @@ header nav ul {
 
 }
 
+/* parameters out of nav and to section */
+
 header nav ul li:not(:last-of-type) {
   border-bottom: 1px solid white;
   padding: 5px 5px 5px 10px;
