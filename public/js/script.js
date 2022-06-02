@@ -1,5 +1,5 @@
-import update from './D3-graph.js'
-import { nextStep, autoPlay, makeSession, resetSession } from './graphButtons.js'
+import updateGraph from './D3-graph.js'
+import { nextStep,  makeSession, resetSession } from './graphButtons.js'
 console.log(document.querySelector('header'))
 
 const sessionID = 3
@@ -21,25 +21,12 @@ const openMenu = () => {
 menuButton.addEventListener('click', openMenu)
 
 
-export const fetchAPI = async (method, url) => {
-  if (method === 'PUT' || method === 'POST') {
-    fetch(url, {
-      method: `${method}`
-    })
-  } else {
-    const response = await fetch(url, {
-      method: `${method}`,
-      mode: 'cors'
-    })
-    const data = response.json()
-    return data
-  }
-}
+
 
 // Initial display of graph
 const data = await fetchAPI('GET', `https://bubble-machine-api-dummy.herokuapp.com/rest/session/${sessionID}`);
 console.log(await data)
-update(await data)
+updateGraph(await data)
 
 
 // Buttons
