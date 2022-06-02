@@ -12,12 +12,13 @@ html {
 
 body {
   min-height: 100%;
-  font-family: Lato, sans-serif;
+  /* font-family: Lato, sans-serif; */
+  font-family: "Montserrat", sans-serif;
   font-size: 100%;
   padding: 0;
   color: #fff;
-  background-color: #222;
-  overflow: hidden;
+  background-color: #0f0c15;
+  /* overflow: hidden; */
 }
 
 svg:hover ~ nav {
@@ -29,23 +30,56 @@ header {
 }
 
 header h1 {
+  font-family: "Montserrat", sans-serif;
   color: #fff;
   text-shadow: 1px 2px 4px #348c90bd;
 }
 
 header nav {
-  position: fixed;
-  bottom: 0;
-  left: -20em;
+  position: absolute;
+  left: -16em;
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
   background: #4444449c;
-  border-radius: 0 0.5em 0.5em 0;
+  border-radius: 0.5em;
   transition: 1s;
+}
+
+header nav.open {
+  margin-left: 2%;
 }
 
 header nav:hover {
   background: #444;
+}
+
+header nav ul {
+  width: 25vw;
+  display: grid;
+}
+
+header nav ul li:not(:last-of-type) {
+  border-bottom: 1px solid white;
+  padding: 5px 5px 5px 10px;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+header na header nav ul li h3 {
+  grid-area: 1 / 2 / 2 / 6;
+}
+
+header nav ul li p {
+  display: none;
+  grid-area: 2 / 2 / 3 / 6;
+}
+
+header nav ul li img {
+  grid-area: 1 / 1 / 3 / 2;
 }
 
 header nav button {
@@ -59,12 +93,21 @@ header nav button {
   width: 60%;
 }
 
+header nav img {
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+}
+
 #menuButton {
+  background-color: #2b2b2b;
   position: absolute;
-  cursor: pointer;
-  right: 0;
-  writing-mode: vertical-rl;
-  text-orientation: upright;
+  left: 100%;
+  top: 50%;
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  border-radius: 0 5px 5px 0;
 }
 
 .open {
@@ -73,19 +116,23 @@ header nav button {
 }
 
 svg {
-  background: radial-gradient(ellipse at center, #fefefe 0%, #cbeeff 100%);
+  max-height: 100vh;
+  display: flex;
+  justify-content: center;
+  background-color: #0f0c15;
 }
 
 .person {
-  fill: #348b90b0;
+  fill: #2780e7;
 }
 
 .person:hover {
-  fill: #348c90bd;
+  fill: #2780e7;
 }
 
 .item {
-  fill: #dc143cbe;
+  fill: #aa46a4;
+  box-shadow: 0px 2px 4px 0px rgba(170, 70, 164, 1);
 }
 
 #zoom {
@@ -96,9 +143,18 @@ svg {
 }
 
 div#zoom button {
-  background-color: white;
-  color: black;
+  display: block;
+  border: none;
+  border-radius: 5px;
+  background-color: #2b2b2b;
+  color: white;
   font-size: 2em;
-  width: 10vw;
+  margin-bottom: 5px;
+  width: 4vw;
   aspect-ratio: 1 / 1;
 }
+
+/* line {
+   stroke: rgba(112, 112, 112, 0.3) 
+  stroke-width: 0.5; 
+}  */

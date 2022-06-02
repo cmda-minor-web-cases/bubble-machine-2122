@@ -1,25 +1,91 @@
 <%- include ('./partials/head.ejs') %>
 <header>
-  <h1>Bubble-machine</h1>
+  <img src="img/bubble-machine-logo.svg" alt="bubble machine logo" />
+  <h1>Bubble Machine</h1>
   <nav>
-    <button id="nextStep">Next step</button>
-    <!-- <button id="autoPlay">Auto play</button> -->
-    <button id="resetSimulation">Reset simulation</button>
-    <button id="makeSession">Make Session</button>
-    <p id="menuButton">OPEN</p>
+    <ul>
+      <li>
+        <img src="img/arrow-down.png" alt="open button" />
+        <h3>Parameter 1</h3>
+        <p>data over parameter 1</p>
+      </li>
+
+      <li>
+        <img src="img/arrow-down.png" alt="open button" />
+        <h3>parameter 2</h3>
+        <p>data over parameter 2</p>
+      </li>
+
+      <li>
+        <img src="img/arrow-down.png" alt="open button" />
+        <h3>parameter 3</h3>
+        <p>data over parameter 2</p>
+      </li>
+
+      <li>
+        <img src="img/arrow-down.png" alt="open button" />
+        <h3>parameter 4</h3>
+        <p>data over parameter 2</p>
+      </li>
+
+      <li>
+        <img src="img/arrow-down.png" alt="open button" />
+        <h3>parameter 5</h3>
+        <p>data over parameter 2</p>
+      </li>
+
+      <li>
+        <img src="img/arrow-down.png" alt="open button" />
+        <h3>parameter 6</h3>
+        <p>data over parameter 2</p>
+      </li>
+
+      <li>
+        <img src="img/arrow-down.png" alt="open button" />
+        <h3>parameter 7</h3>
+        <p>data over parameter 2</p>
+      </li>
+
+      <li>
+        <img src="img/arrow-down.png" alt="open button" />
+        <h3>parameter 8</h3>
+        <p>data over parameter 2</p>
+      </li>
+
+      <li>
+        <img src="img/arrow-down.png" alt="open button" />
+        <h3>parameter 9</h3>
+        <p>data over parameter 2</p>
+      </li>
+
+      <li>
+        <img src="img/arrow-down.png" alt="open button" />
+        <h3>parameter 10</h3>
+        <p>data over parameter 2</p>
+      </li>
+
+      <li>
+        <img src="img/arrow-down.png" alt="open button" />
+        <h3>parameter 11</h3>
+        <p>data over parameter 2</p>
+      </li>
+    </ul>
+    <img src="img/arrow-right.png" alt="open button" id="menuButton" />
   </nav>
 </header>
 
-<figure id="graph">
-
-</figure>
+<figure id="graph"></figure>
 <div id="zoom">
   <button id="zoomIn">+</button>
   <button id="zoomOut">-</button>
 </div>
 
-  <h2>List of notes</h2>
-  <ul id="listNotes"></ul>
-  <ul id="listDocuments"></ul>
+<!-- reset and next step buttons -->
+<button id="nextStep">Next step</button>
+<button id="resetSimulation">Reset simulation</button>
+
+<h2>List of notes</h2>
+<ul id="listNotes"></ul>
+<ul id="listDocuments"></ul>
 
 <%- include ('./partials/footer.ejs') %>
