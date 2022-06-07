@@ -105,7 +105,8 @@ div#zoom button {
   aspect-ratio: 1 / 1;
 }
 
-a#link {
+a#downloadSVG {
+  cursor: pointer;
   z-index: 100;
   background-color: red;
   width: 100px;
