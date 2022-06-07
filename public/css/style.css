@@ -53,6 +53,7 @@ header h1 {
 }
 
 header img {
+  height: 3vw;
   margin: 2% 0 0 3%;
 }
 
@@ -63,12 +64,12 @@ section {
 }
 section ul {
   position: absolute;
-  left: -20em;
+  left: -26vw;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  background: #4444449c;
-  border-radius: 0.5em 0 0.5em 0.5em;
+  background: #323232;
+  border-radius: 0.5em;
   transition: 1s;
 }
 
@@ -76,17 +77,21 @@ section ul {
 
 section.open {
   margin-left: 26%;
+  transition: 1s;
 
 }
 
 
 header nav:hover {
-  background: #444;
+  background: #323232;
 }
 
 section ul {
   width: 25vw;
   display: grid;
+  height: 25vw;
+    overflow: scroll;
+    margin-top: 10%;
 }
 
 /* parameters out of nav and to section */
@@ -95,14 +100,14 @@ section ul li {
   margin: 0;
   padding: 0;
   list-style: none;
-  /* padding: 5px 5px 5px 10px; */
+  padding: 5px 5px 5px 10px;
   display: grid;
   grid-template-columns: 1fr 4fr;
-  grid-template-rows: repeat(2, 1fr);
+  /* grid-template-rows: repeat(2, 1fr); */
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   align-items: center;
-    justify-items: center;
+  justify-items: center;
 }
 
 
@@ -111,6 +116,8 @@ section ul li:not(:last-of-type) {
 }
 
 section ul li h3 {
+  /* text-align: left; */
+  font-weight: 600;
   grid-area: 1 / 2 / 2 / 6;
 }
 
@@ -119,8 +126,13 @@ section ul li p {
   grid-area: 2 / 2 / 3 / 6;
 }
 
+section.open ul li.open-menu {
+  transition: 1s;
+  transition-timing-function: ease;
+}
 section ul li.open-menu p {
   display: block;
+
 }
 
 section ul li img {
@@ -154,7 +166,13 @@ section ul li img {
   height: 50px;
   padding: 10px;
   border-radius: 0 5px 5px 0;
+  margin-top: 15%;
 
+}
+
+section.open #menuButton {
+  margin-left: -1vw;
+  
 }
 
 /* #menuButton.open {
@@ -199,12 +217,19 @@ div#zoom button {
   border-radius: 5px;
   background-color: #2b2b2b;
   color: white;
-  font-size: 2em;
+  font-size: 1.5vw;
   margin-bottom: 5px;
-  width: 4vw;
+  width: 3vw;
   aspect-ratio: 1 / 1;
 }
 
+div.reset {
+  display: flex;
+  position: fixed;
+  right: 5%;
+  bottom: 0;
+  padding: 17px;
+}
 
 ul.accordion {
   display: flex;
