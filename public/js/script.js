@@ -12,8 +12,6 @@ const menu = document.querySelector('section')
 const parameterButtons = document.querySelectorAll('section ul li')
 const accordionButton =  document.querySelectorAll('section ul li img')
 
-console.log(accordionButton)
-
 
 const resetBtn = document.querySelector('#resetSimulation')
 const nextBtn = document.querySelector('#nextStep')
