@@ -47,7 +47,7 @@ updateGraph(await data)
 
 nextBtn.addEventListener('click', nextStep)
 resetBtn.addEventListener('click', resetSession)
-sessionBtn.addEventListener('click', createSession)
+// sessionBtn.addEventListener('click', createSession)
 // autoBtn.addEventListener('click', autoPlay)
 
 
