@@ -1,91 +1,116 @@
 <%- include ('./partials/head.ejs') %>
 <header>
   <img src="img/bubble-machine-logo.svg" alt="bubble machine logo" />
-  <h1>Bubble Machine</h1>
+  <!-- <h1>Bubble Machine</h1> -->
   <nav>
+    <ul>
+
+    </ul>
+   
+  </nav>
+</header>
+
+<main>
+
+  <h2>Datapoints</h2>
+  <ul class="accordion">
+    <li>Items</li>
+    <li>Users</li>
+    <li>Links</li>
+  </ul>
+
+
+  <section>
     <ul>
       <li>
         <img src="img/arrow-down.png" alt="open button" />
-        <h3>Parameter 1</h3>
-        <p>data over parameter 1</p>
+        <h3>Number of users</h3>
+        <p>data over parameter 1 udibfiF BOAbojbaBAS  UOAHIDOIDJqwd  hhdohwIOHHIOBDBO  IHIOioEFJDSJBJSDJ dfnjvsnlv</p>
       </li>
 
       <li>
         <img src="img/arrow-down.png" alt="open button" />
-        <h3>parameter 2</h3>
+        <h3>Number of friends</h3>
         <p>data over parameter 2</p>
       </li>
 
       <li>
         <img src="img/arrow-down.png" alt="open button" />
-        <h3>parameter 3</h3>
+        <h3>Steps per day</h3>
         <p>data over parameter 2</p>
       </li>
 
       <li>
         <img src="img/arrow-down.png" alt="open button" />
-        <h3>parameter 4</h3>
+        <h3>Produced items per day</h3>
         <p>data over parameter 2</p>
       </li>
 
       <li>
         <img src="img/arrow-down.png" alt="open button" />
-        <h3>parameter 5</h3>
+        <h3>Max. item links</h3>
         <p>data over parameter 2</p>
       </li>
 
       <li>
         <img src="img/arrow-down.png" alt="open button" />
-        <h3>parameter 6</h3>
+        <h3>Exposed items per day, per person</h3>
         <p>data over parameter 2</p>
       </li>
 
       <li>
         <img src="img/arrow-down.png" alt="open button" />
-        <h3>parameter 7</h3>
+        <h3>Latitude of acceptance</h3>
         <p>data over parameter 2</p>
       </li>
 
       <li>
         <img src="img/arrow-down.png" alt="open button" />
-        <h3>parameter 8</h3>
+        <h3>Sharpness</h3>
         <p>data over parameter 2</p>
       </li>
 
       <li>
         <img src="img/arrow-down.png" alt="open button" />
-        <h3>parameter 9</h3>
+        <h3>Probability of posting items on the social network</h3>
         <p>data over parameter 2</p>
       </li>
 
       <li>
         <img src="img/arrow-down.png" alt="open button" />
-        <h3>parameter 10</h3>
+        <h3>User behaviour</h3>
         <p>data over parameter 2</p>
       </li>
 
       <li>
         <img src="img/arrow-down.png" alt="open button" />
-        <h3>parameter 11</h3>
+        <h3>Challenge</h3>
         <p>data over parameter 2</p>
       </li>
     </ul>
     <img src="img/arrow-right.png" alt="open button" id="menuButton" />
-  </nav>
-</header>
 
-<figure id="graph"></figure>
-<div id="zoom">
-  <button id="zoomIn">+</button>
-  <button id="zoomOut">-</button>
-</div>
+  </section>
 
-<!-- reset and next step buttons -->
-<button id="nextStep">Next step</button>
-<button id="resetSimulation">Reset simulation</button>
 
-<h2>List of notes</h2>
-<ul id="listNotes"></ul>
-<ul id="listDocuments"></ul>
+
+  <figure id="graph"></figure>
+
+  <div class="reset">
+       <!-- reset and next step buttons -->
+   <button id="nextStep">Next Step</button>
+   <button id="resetSimulation">Reset Simulation</button>
+  </div>
+  <div id="zoom">
+    <button id="zoomIn">+</button>
+    <button id="zoomOut">-</button>
+  </div>
+
+
+  <h2>List of notes</h2>
+  <ul id="listNotes"></ul>
+  <ul id="listDocuments"></ul>
+
+</main>
 
 <%- include ('./partials/footer.ejs') %>
