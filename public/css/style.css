@@ -300,5 +300,6 @@ button#resetSimulation {
 
 div#my_dataviz svg {
     position: fixed;
-    bottom: 0;
+    top: 0;
+    /* display: none; */
 }
