@@ -1,4 +1,5 @@
-import update from './D3-graph.js'
+import update from './D3-canvas.js'
+// import update from './D3-graph.js'
 import { fetchAPI } from './script.js'
 
 const sessionID = 1

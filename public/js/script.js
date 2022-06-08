@@ -1,6 +1,6 @@
-import update from './D3-graph.js'
+import update from './D3-canvas.js'
+// import update from './D3-graph.js'
 import { nextStep, autoPlay, makeSession, resetSession } from './graphButtons.js'
-console.log(document.querySelector('header'))
 
 const sessionID = 1
 const menuButton = document.getElementById('menuButton')
@@ -36,7 +36,6 @@ export const fetchAPI = async (method, url) => {
 
 // Initial display of graph
 const data = await fetchAPI('GET', `https://bubble-machine-api-dummy.herokuapp.com/rest/session/${sessionID}`);
-console.log(await data)
 update(await data)
 
 

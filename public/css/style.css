@@ -15,8 +15,8 @@ body {
   font-family: Lato, sans-serif;
   font-size: 100%;
   padding: 0;
-  color: #fff;
-  background-color: #222;
+  color: #222;
+  background-color: #fff;
   overflow: hidden;
 }
 
@@ -74,6 +74,10 @@ header nav button {
 
 svg {
   background: radial-gradient(ellipse at center, #fefefe 0%, #cbeeff 100%);
+}
+
+canvas {
+  background: #333
 }
 
 .person {
