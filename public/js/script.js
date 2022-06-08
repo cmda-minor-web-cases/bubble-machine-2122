@@ -4,6 +4,7 @@ import { fetchDataFromAPI } from './modules/apiData.js'
 import { createSession } from './modules/createSession.js'
 import { resetSession } from './modules/resetSession.js'
 import { nextStep } from './modules/updateSession.js'
+import { autoPlay } from './modules/playSession.js'
 // console.log(document.querySelector('header'))
 
 const sessionID = 1
@@ -16,7 +17,7 @@ const accordionButton =  document.querySelectorAll('section ul li img')
 const resetBtn = document.querySelector('#resetSimulation')
 const nextBtn = document.querySelector('#nextStep')
 const sessionBtn = document.querySelector('#makeSession')
-// const autoBtn = document.querySelector('#autoPlay')
+const autoBtn = document.querySelector('#autoPlay')
 
 
 
@@ -48,7 +49,7 @@ updateGraph(await data)
 nextBtn.addEventListener('click', nextStep)
 resetBtn.addEventListener('click', resetSession)
 // sessionBtn.addEventListener('click', createSession)
-// autoBtn.addEventListener('click', autoPlay)
+autoBtn.addEventListener('click', autoPlay)
 
 
   // https://www.sitepoint.com/how-to-translate-from-dom-to-svg-coordinates-and-back-again/
