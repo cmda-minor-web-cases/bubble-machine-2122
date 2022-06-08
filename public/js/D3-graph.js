@@ -14,7 +14,6 @@ const yScale = d3.scaleLinear().range([0 + margin.height, height - margin.height
 
 
 const updateGraph = async (data) => {
-  console.log(data)
   const nodes = data.nodes
   const links = data.links
 
