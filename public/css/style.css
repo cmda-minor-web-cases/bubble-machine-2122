@@ -296,3 +296,9 @@ button#resetSimulation {
     margin-left: 0;
   }
 }
+
+
+div#my_dataviz svg {
+    position: fixed;
+    bottom: 0;
+}
