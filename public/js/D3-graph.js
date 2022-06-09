@@ -5,12 +5,12 @@ const size = 10
 
 // Create the svg in the body
 const svg = d3.select('#graph').append('svg')
-.attr('width', width)
-.attr('height', height)
+.attr('width', width - 0)
+.attr('height', height - 200)
 
 // Scale
-const xScale = d3.scaleLinear().range([0 + margin.width, width - margin.width])
-const yScale = d3.scaleLinear().range([0 + margin.height, height - margin.height])
+const xScale = d3.scaleLinear().range([0 + margin.width, width - margin.width - 0])
+const yScale = d3.scaleLinear().range([0 + margin.height, height - margin.height - 200])
 
 
 const updateGraph = async (data) => {
@@ -68,43 +68,3 @@ const updateGraph = async (data) => {
 
 export default updateGraph
 
-
-// Function to download svg image
-function downloadSVG(){
-
-// //get svg element.
-const svg2 = document.querySelector("svg");
-
-//get svg source.
-const serializer = new XMLSerializer();
-let source = serializer.serializeToString(svg2);
-
-//add name spaces.
-if(!source.match(/^<svg[^>]+xmlns="http\:\/\/www\.w3\.org\/2000\/svg"/)){
-    source = source.replace(/^<svg/, '<svg xmlns="http://www.w3.org/2000/svg"');
-}
-if(!source.match(/^<svg[^>]+"http\:\/\/www\.w3\.org\/1999\/xlink"/)){
-    source = source.replace(/^<svg/, '<svg xmlns:xlink="http://www.w3.org/1999/xlink"');
-}
-
-//add xml declaration
-source = '<?xml-stylesheet href="https://bubble-machine.herokuapp.com/css/style.css" version="1.0" standalone="no"?>\r\n' + source;
-
-//convert svg source to URI data scheme.
-const url = "data:image/svg+xml;charset=utf-8,"+encodeURIComponent(source);
-
-// make from button a download svg button
-document.getElementById("downloadSVG").setAttribute("href", url);
-document.getElementById("downloadSVG").setAttribute("download", "test.svg");
-
-}
-
-// When clicking on downloadSVG button download svg
-document.querySelector("#downloadSVG").addEventListener('click', (e) => {
-  downloadSVG()
-}, false);
-
-// bron https://stackoverflow.com/questions/23218174/how-do-i-save-export-an-svg-file-after-creating-an-svg-with-d3-js-ie-safari-an
-
-
-  
