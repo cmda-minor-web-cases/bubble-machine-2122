@@ -67,10 +67,6 @@ LinkDistanceFriends[2]["values"].push({time: `${step["step"]}`, value: pythagora
 
 localStorage.setItem("LinkDistanceFriends", JSON.stringify(LinkDistanceFriends));
 
-console.log("test");
-
-
-
 
 // Graph2
 // bron: https://d3-graph-gallery.com/graph/connectedscatter_multi.html\
@@ -139,8 +135,6 @@ const svg2 = d3.select("#my_dataviz")
       const num3min = d3.min(dataReady[2]["values"], (d) => d.value);
       let largest = Math.max(num1, num2, num3);
       let smalest = Math.min(num1min, num2min, num3min);
-      console.log(largest);
-      console.log(smalest);
 
 
     // Add Y axis
@@ -179,7 +173,6 @@ const svg2 = d3.select("#my_dataviz")
         .attr("r", 5)
         .attr("stroke", "white")
 
-        console.log(dataReady);
     // Add a legend at the end of each line
     svg2
       .selectAll("myLabels")

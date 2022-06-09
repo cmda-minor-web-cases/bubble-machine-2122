@@ -58,30 +58,3 @@ autoBtn.addEventListener('click', () => autoPlay(sessionID))
   // https://www.sitepoint.com/how-to-translate-from-dom-to-svg-coordinates-and-back-again/
 
 
-
-// When clicking on zoomIn button change viewBox to zoom
-document.querySelector("#zoomIn").addEventListener('click', (e) => {
-  console.log("test");
-    document.querySelector("#mysvg").setAttribute("viewBox", "-0.5 -0.5  1 1"); 
-  }, false);
-  
-  // When clicking on zoomOut button change viewBox to zoom
-  document.querySelector("#zoomOut").addEventListener('click', (e) => {
-    document.querySelector("#mysvg").setAttribute("viewBox", "-1 -1  2 2");
-  }, false);
-
-
-  // localstorage y1 en x1 ophalen van de client
-  // label: "person"
-  // x: 0.797451970717726
-  // y: 0.6517441909029593
-
-
-  // console.log(data.links[0]);
-  // console.log(data.links[0]["source"]);
-  // console.log(data.links[0]["target"]);
-
-
-console.log(data);
-
-

@@ -227,6 +227,7 @@ div#zoom button {
   aspect-ratio: 1 / 1;
 }
 
+
 div.reset {
   display: flex;
   position: fixed;
@@ -315,4 +316,20 @@ div#my_dataviz{
 
 #my_dataviz .showDistance{
   display: block;
+}
+
+
+#downloadSVG {
+  background-color: white;
+  color: black;
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  font-size: 13px;
+  height: 56px;
+  align-self: center;
+  display: flex;
+  place-items: center;
+  margin-right: 10px;
+  padding: 10px;
 }
