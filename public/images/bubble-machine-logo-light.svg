@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="196" height="44" viewBox="0 0 196 44">
+  <g id="Group_292" data-name="Group 292" transform="translate(10086 15033)">
+    <circle id="Ellipse_269" data-name="Ellipse 269" cx="22" cy="22" r="22" transform="translate(-9934 -15033)" fill="#081f4a"/>
+    <path id="Path_340" data-name="Path 340" d="M24.029,39.685c10.734-.121,13.095-15.824,13.095-10.216A18.562,18.562,0,0,1,0,29.468c.243-8.583,9.613-10.439,13.633-5.308S13.295,39.806,24.029,39.685Z" transform="translate(-9930.58 -15040.487)" fill="#eb6072"/>
+    <path id="Path_339" data-name="Path 339" d="M22.643,36.492c10.115-.09,13.05-12.854,13.05-8.691-.182,7.756-8.439,15.807-18.1,15.807S0,36.518,0,28.908c.229-6.372,8.061-6.24,9.71-2.11S12.528,36.582,22.643,36.492Z" transform="translate(-9929.51 -15036.12)" fill="#f8e36a"/>
+    <text id="Bubble_Machine" data-name="Bubble 
+Machine" transform="translate(-10086 -15033)" fill="#081f4a" font-size="20" font-family="Montserrat-Black, Montserrat" font-weight="800"><tspan x="-77" y="19">Bubble </tspan><tspan x="-92.22" y="39">Machine</tspan></text>
+    <ellipse id="Ellipse_270" data-name="Ellipse 270" cx="3" cy="2.5" rx="3" ry="2.5" transform="translate(-9918 -15028)" fill="#f8e36a"/>
+    <ellipse id="Ellipse_271" data-name="Ellipse 271" cx="4.5" cy="5" rx="4.5" ry="5" transform="translate(-9907 -15023)" fill="#eb6072"/>
+  </g>
+</svg>
