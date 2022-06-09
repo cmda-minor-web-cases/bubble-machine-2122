@@ -300,3 +300,19 @@ button#resetSimulation {
     margin-left: 0;
   }
 }
+
+div#my_dataviz{
+  position: relative;
+}
+
+
+#my_dataviz svg {
+    position: fixed;
+    bottom: 0;
+    display: none;
+}
+
+
+#my_dataviz .showDistance{
+  display: block;
+}

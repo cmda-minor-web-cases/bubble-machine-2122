@@ -41,16 +41,18 @@ menuButton.addEventListener('click', openMenu)
 
 // Initial display of graph
 const data = await fetchDataFromAPI('GET', `https://bubble-machine-api-dummy.herokuapp.com/rest/session/${sessionID}`);
-console.log(await data)
+// console.log(await data)
 updateGraph(await data)
 
 
 // Buttons
 
+
 nextBtn.addEventListener('click', () => nextStep(sessionID))
 resetBtn.addEventListener('click', () => resetSession(sessionID))
 // sessionBtn.addEventListener('click', createSession)
 autoBtn.addEventListener('click', () => autoPlay(sessionID))
+
 
 
   // https://www.sitepoint.com/how-to-translate-from-dom-to-svg-coordinates-and-back-again/
@@ -73,3 +75,13 @@ document.querySelector("#zoomIn").addEventListener('click', (e) => {
   // label: "person"
   // x: 0.797451970717726
   // y: 0.6517441909029593
+
+
+  // console.log(data.links[0]);
+  // console.log(data.links[0]["source"]);
+  // console.log(data.links[0]["target"]);
+
+
+console.log(data);
+
+
