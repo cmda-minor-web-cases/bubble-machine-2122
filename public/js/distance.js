@@ -88,7 +88,7 @@ const margin2 = {top: 10, right: 100, bottom: 30, left: 30},
 const svg2 = d3.select("#my_dataviz")
   .append("svg")
     .attr('width', width)
-  .attr('height', height)
+  .attr('height', height/3)
   .append("g")
     .attr("transform",`translate(${margin2.left},${margin2.top})`);
 
@@ -115,8 +115,6 @@ const svg2 = d3.select("#my_dataviz")
       const numm3min = d3.min(dataReady[2]["values"], (d) => d.time);
       let largest2 = Math.max(numm1, numm2, numm3);
       let smalest2 = Math.min(numm1min, numm2min, numm3min);
-      console.log(largest2);
-      console.log(smalest2);
 
     // Add X axis --> it is a date format
     // const LinkDistanceFriends = JSON.parse(localStorage.getItem("LinkDistanceFriends"));
@@ -127,7 +125,7 @@ const svg2 = d3.select("#my_dataviz")
 
 
       .domain([smalest2, largest2])
-      .range([0, width])
+      .range([0 , width - margin.width])
     svg2.append("g")
       // .attr("transform", `translate(0, ${height})`)
       .call(d3.axisBottom(x));
@@ -140,15 +138,16 @@ const svg2 = d3.select("#my_dataviz")
       const num2min = d3.min(dataReady[1]["values"], (d) => d.value);
       const num3min = d3.min(dataReady[2]["values"], (d) => d.value);
       let largest = Math.max(num1, num2, num3);
-      let smalest = Math.min(num1, num2, num3);
-
+      let smalest = Math.min(num1min, num2min, num3min);
+      console.log(largest);
+      console.log(smalest);
 
 
     // Add Y axis
     const y = d3.scaleLinear()
       // .domain([d3.min( data.nodes, (data) => data.friends), d3.max(data.nodes, (data) => data.friends)])
       .domain( [smalest, largest])
-      .range([ height, 0 ]);
+      .range([ height/3 - 30, 0  ]);
     svg2.append("g")
       .call(d3.axisLeft(y));
 
@@ -194,3 +193,15 @@ const svg2 = d3.select("#my_dataviz")
           .style("fill", d => myColor(d.name))
           .style("font-size", 15)
 
+
+
+
+// When clicking on zoomIn button change viewBox to zoom
+document.querySelector("#my_dataviz svg").addEventListener('click', (e) => {
+  document.querySelector("#my_dataviz svg").classList.toggle("showDistance");
+  }, false);
+
+  // When clicking on zoomIn button change viewBox to zoom
+document.querySelector("#distance").addEventListener('click', (e) => {
+  document.querySelector("#my_dataviz svg").classList.toggle("showDistance");
+  }, false);

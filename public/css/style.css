@@ -297,9 +297,18 @@ button#resetSimulation {
   }
 }
 
+div#my_dataviz{
+  position: relative;
+}
 
-div#my_dataviz svg {
+
+#my_dataviz svg {
     position: fixed;
-    top: 0;
-    /* display: none; */
+    bottom: 0;
+    display: none;
+}
+
+
+#my_dataviz .showDistance{
+  display: block;
 }
