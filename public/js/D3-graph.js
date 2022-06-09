@@ -4,16 +4,16 @@ const margin = { width: (0.1 * width), height: (0.1 * height) }
 const size = 10
 
 // Create the svg in the body
-const svg = d3.select('figure').append('svg')
-  .attr('width', width)
-  .attr('height', height)
+const svg = d3.select('#graph').append('svg')
+.attr('width', width)
+.attr('height', height)
 
 // Scale
 const xScale = d3.scaleLinear().range([0 + margin.width, width - margin.width])
 const yScale = d3.scaleLinear().range([0 + margin.height, height - margin.height])
 
+
 const updateGraph = async (data) => {
-  // console.log(data)
   const nodes = data.nodes
   const links = data.links
 
@@ -21,16 +21,6 @@ const updateGraph = async (data) => {
 
   xScale.domain([d3.min(nodes, (d) => d.x), d3.max(nodes, (d) => d.x)])
   yScale.domain([d3.min(nodes, (d) => d.y), d3.max(nodes, (d) => d.y)])
-
-  // const path = svg.selectAll('path').data(links).join(
-  //   (enter) => {
-  //     enter = enter.append('path')
-  //       .attr('d', linkGen)
-  //     return enter
-  //   },
-  //   (update) => update,
-  //   (exit) => exit.remove()
-  // )
 
   const circle = svg.selectAll('circle').data(nodes).join(
     (enter) => {
@@ -41,8 +31,24 @@ const updateGraph = async (data) => {
     (exit) => exit.remove()
   )
 
+  const path = svg.selectAll('path')
+
   circle
     .transition()
+    // .attr('cx', (nodes) =>  {
+    //   if (nodes.label === 'person' && checkbox.checked === true){
+    //     return xScale(nodes.innate_x)
+    //   } else {
+    //     return xScale(nodes.x)
+    //   }}
+    // )
+    // .attr('cy', (nodes) =>  {
+    //   if (nodes.label === 'person' && checkbox.checked === true){
+    //     return xScale(nodes.innate_y)
+    //   } else {
+    //     return xScale(nodes.y)
+    //   }}
+    // )
     .attr('cx', (nodes) => xScale(nodes.x))
     .attr('cy', (nodes) => yScale(nodes.y))
     .attr('r', (nodes) => {
@@ -52,12 +58,12 @@ const updateGraph = async (data) => {
         return '5px'
       }
     })
-    .attr('class', (nodes) => nodes.label)
-
-  // path
-  //   .transition()
-  //   .attr('fill', 'none')
-  //   .attr('class', (links) => links.label )
+    .attr('class', (nodes) => nodes.label )
+  
+  path
+    .transition()
+    .attr('fill', 'none')
+    .attr('class', (links) => links.label )
 }
 
 export default updateGraph
