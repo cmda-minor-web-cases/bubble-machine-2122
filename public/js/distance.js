@@ -73,8 +73,6 @@ localStorage.setItem("LinkDistanceFriends", JSON.stringify(LinkDistanceFriends))
 const width = window.innerWidth
 const height = window.innerHeight
 const margin = { width: (0.1 * width), height: (0.1 * height) }
-
-
 const margin2 = {top: 10, right: 100, bottom: 30, left: 30},
     width2 = 460 - margin.left - margin.right,
     height2 = 400 - margin.top - margin.bottom;
@@ -113,13 +111,7 @@ const svg2 = d3.select("#my_dataviz")
       let smalest2 = Math.min(numm1min, numm2min, numm3min);
 
     // Add X axis --> it is a date format
-    // const LinkDistanceFriends = JSON.parse(localStorage.getItem("LinkDistanceFriends"));
     const x = d3.scaleLinear()
-
-  //   xScale.domain([d3.min(nodes, (d) => d.x), d3.max(nodes, (d) => d.x)])
-  // yScale.domain([d3.min(nodes, (d) => d.y), d3.max(nodes, (d) => d.y)])
-
-
       .domain([smalest2, largest2])
       .range([0 , width - margin.width])
     svg2.append("g")
