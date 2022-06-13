@@ -1,3 +1,5 @@
+import buildSVG from './distance.js'
+
 const width = window.innerWidth
 const height = window.innerHeight
 const margin = { width: (0.1 * width), height: (0.1 * height) }
@@ -14,6 +16,7 @@ const yScale = d3.scaleLinear().range([0 + margin.height, height - margin.height
 
 
 const updateGraph = async (data) => {
+  // buildSVG();
   const nodes = data.nodes
   const links = data.links
 

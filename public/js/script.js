@@ -7,6 +7,7 @@ import { nextStep } from './modules/updateSession.js'
 import { autoPlay } from './modules/playSession.js'
 // console.log(document.querySelector('header'))
 
+
 const sessionID = 1
 
 const menuButton = document.getElementById('menuButton')
